@@ -31,8 +31,9 @@ se dětem budou hodit při studiu jakéhokoliv oboru.
 
 -----------
 
-License: Toto dílo podléhá licenci
+Toto dílo podléhá licenci
 `https://creativecommons.org/licenses/by-sa/4.0/`
+
 .. image:: license.png
 
 
