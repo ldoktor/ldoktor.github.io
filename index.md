@@ -9,7 +9,7 @@ jako připomínka, či jiným lektorům jako zdroj informací.
 
 ## Ročníky:
 
-[2019](courses/2019.md)
+[2019](courses/2019.md) &nbsp;&nbsp; [(letáček)](courses/2019-nuselska.jpg)
 
 ## Lektoři
 
