@@ -9,11 +9,11 @@ jako připomínka, či jiným lektorům jako zdroj informací.
 
 ## Ročníky:
 
-[2019](courses/2019.md) &nbsp;&nbsp; [(letáček)](courses/2019-nuselska.jpg)
+* [2019](courses/2019.md) &nbsp;&nbsp; [(letáček)](courses/2019-nuselska.jpg)
 
 ## Lektoři
 
-[Lukáš Doktor](lectors/ldoktor.md)
+* [Lukáš Doktor](lectors/ldoktor.md)
 
 ## Kontakt
 
