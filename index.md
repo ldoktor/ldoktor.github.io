@@ -15,6 +15,10 @@ jako připomínka, či jiným lektorům jako zdroj informací.
 
 [Lukáš Doktor](lectors/ldoktor.md)
 
+## Kontakt
+
+<img width="300" height="152" src="media/contact.png" alt="Kontaktní informace">
+
 * * * * *
 
 Rád bych poděkoval kolegovi Mirku Suchému, který podobné kurzy

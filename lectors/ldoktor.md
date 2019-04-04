@@ -12,10 +12,9 @@ Je šťastně ženatý, má dvě úžasné děti, kterým by rád dopřál možn
 sdílet zajímavé objevy se svými vrstevníky a tak se rozhodl přenést
 kurzy programování do Havlíčkova Brodu.
 
-<pre>
-Brigádnická 2130
-58001  Havlíčkův Brod
-IČ: 07850786
-č.ú.: 2700721780/2010
-Tel: 724919831
-</pre>
+Odkazy:
+
+* [Github](https://github.com/ldoktor)
+* [Linkedin](https://www.linkedin.com/in/ldoktor)
+
+<img width="300" height="152" src="../media/contact.png">
