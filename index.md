@@ -7,6 +7,12 @@ děti** pořádaném na **ZŠ Nuselská** a zároveň bude obsahovat
 materiály použité v jednotlivých lekcích aby mohly sloužit studentům
 jako připomínka, či jiným lektorům jako zdroj informací.
 
+## Aktuality:
+
+**Rád bych Vás pozval na den otevřených kroužků pořádaný školní družinou
+ZŠ Nuselská, který bude probíhat ve čtvrtek 12.9. v prosklené učebně ve 2.
+podlaží, kde bude od 12:30 tento kurz prezentován.**
+
 ## Ročníky:
 
 * [2019](courses/2019.md) &nbsp;&nbsp; [(letáček](courses/2019-nuselska.jpg), [přihláška)](courses/2019-prihlaska.pdf)
