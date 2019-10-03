@@ -9,9 +9,8 @@ jako připomínka, či jiným lektorům jako zdroj informací.
 
 ## Aktuality:
 
-**Rád bych Vás pozval na den otevřených kroužků pořádaný školní družinou
-ZŠ Nuselská, který bude probíhat ve čtvrtek 12.9. v prosklené učebně ve 2.
-podlaží, kde bude od 12:30 tento kurz prezentován.**
+**Z důvodu obědové pauzy se začátek kurzu na Nuselské posouvá z 12:30
+na 13:00.**
 
 ## Ročníky:
 
