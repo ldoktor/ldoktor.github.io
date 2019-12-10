@@ -13,6 +13,8 @@ jako připomínka, či jiným lektorům jako zdroj informací.
 Nuselská 14:10 - 15:10, přednostně pro místní studenty ale je možnost
 i pro jiné žáky prvních tříd. Cena za pololetí je 1100kč.**
 
+**Video z Mikulášské hodiny [zde](courses/2019-09-st-nicolas.mp4)**
+
 ## Ročníky:
 
 * [2019](courses/2019.md) &nbsp;&nbsp; [(letáček](courses/2019-nuselska.jpg), [přihláška)](courses/2019-prihlaska.pdf)
