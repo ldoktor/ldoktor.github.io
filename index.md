@@ -9,8 +9,9 @@ jako připomínka, či jiným lektorům jako zdroj informací.
 
 ## Aktuality:
 
-**Z důvodu obědové pauzy se začátek kurzu na Nuselské posouvá z 12:30
-na 13:00.**
+**V případě zájmu je možnost v pololetí otevřít nový kurz na ZŠ
+Nuselská 14:10 - 15:10, přednostně pro místní studenty ale je možnost
+i pro jiné žáky prvních tříd. Cena za pololetí je 1100kč.**
 
 ## Ročníky:
 
