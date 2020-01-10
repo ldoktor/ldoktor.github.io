@@ -11,7 +11,7 @@ jako připomínka, či jiným lektorům jako zdroj informací.
 
 **V případě zájmu je možnost v pololetí otevřít nový kurz na ZŠ
 Nuselská 14:10 - 15:10, přednostně pro místní studenty ale je možnost
-i pro jiné žáky prvních tříd. Cena za pololetí je 1100kč.**
+i pro jiné žáky prvních či druhých tříd. Cena za pololetí je 1100kč.**
 
 **Video z Mikulášské hodiny [zde](courses/2019-09-st-nicolas.mp4)**
 
