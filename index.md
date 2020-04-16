@@ -17,7 +17,7 @@ i pro jiné žáky prvních či druhých tříd. Cena za pololetí je 1100kč.**
 
 ## Ročníky:
 
-* [2019](courses/2019.md) &nbsp;&nbsp; [(letáček](courses/2019-nuselska.jpg), [přihláška)](courses/2019-prihlaska.pdf)
+* [2019/2020](courses/2019.md) &nbsp;&nbsp; [(letáček](courses/2019-nuselska.jpg), [přihláška)](courses/2019-prihlaska.pdf)
 
 ## Lektoři
 
