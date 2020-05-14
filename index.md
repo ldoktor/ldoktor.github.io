@@ -9,8 +9,8 @@ jako připomínka, či jiným lektorům jako zdroj informací.
 
 ## Aktuality:
 
-**Po dobu COVID-19 karantény probíhá výuka online, informace
-najdou rodiče v emailech/na telefonu**
+**Po rozvolnění pravidel ohledně COVID-19 probíhá výuka venku,
+informace viz. email**
 
 ## Ročníky:
 
