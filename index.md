@@ -11,7 +11,8 @@ jako připomínka, či jiným lektorům jako zdroj informací.
 
 **Příští rok 2020/2021 bude výuka rozdělena do dvou kurzů,
 začátečníci (1. a 2. třída) a pokročilí (2. a 3. třída).
-Detaily viz [letáček](courses/2020_2021/letacek.jpg)**
+Detaily viz [letáček](courses/2020_2021/letacek.jpg),
+ukázka z přechozího ročníku [zde](courses/2019.md)**
 
 **Po rozvolnění pravidel ohledně COVID-19 probíhá výuka venku,
 informace viz. email**
