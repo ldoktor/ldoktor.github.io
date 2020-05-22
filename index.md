@@ -9,12 +9,17 @@ jako připomínka, či jiným lektorům jako zdroj informací.
 
 ## Aktuality:
 
+**Příští rok 2020/2021 bude výuka rozdělena do dvou kurzů,
+začátečníci (1. a 2. třída) a pokročilí (2. a 3. třída).
+Detaily viz [letáček](courses/2020_2021/letacek.jpg)**
+
 **Po rozvolnění pravidel ohledně COVID-19 probíhá výuka venku,
 informace viz. email**
 
 ## Ročníky:
 
-* [2019/2020](courses/2019.md) &nbsp;&nbsp; [(letáček](courses/2019-nuselska.jpg), [přihláška)](courses/2019-prihlaska.pdf)
+* ZŠ Nuselská 2019/2020  - [začátečníci](courses/2019.md) &nbsp;&nbsp; ([letáček](courses/2019-nuselska.jpg), [přihláška](courses/2019-prihlaska.pdf))
+* ZŠ Nuselská 2020/2021 - [začátečníci](courses/2020_2021/zacatecnici.md), [pokročilí](courses/2020_2021/pokrocili.md) &nbsp;&nbsp; ([letáček](courses/2020_2021/letacek.jpg), [miniletáček](courses/2020_2021/miniletacek.pdf))
 
 ## Lektoři
 
