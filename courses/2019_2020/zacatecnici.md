@@ -19,7 +19,7 @@ Cílem kurzu není vzdělat hotového programátora, ale rozvíjet logické
 myšlení, algoritmizaci a jiné vlastnosti, které se dětem budou hodit
 při studiu jakéhokoliv oboru.
 
-Kurz bude organizován [Lukášem Doktorem](../lectors/ldoktor.md)
+Kurz bude organizován [Lukášem Doktorem](../../lectors/ldoktor.md)
 
 ## 1. hodina
 
@@ -258,7 +258,7 @@ Kurz bude organizován [Lukášem Doktorem](../lectors/ldoktor.md)
     <img align="right" src="2019-22-code-org-small.jpg" style="height:85px">
 </a>
 
-* Videokonference [návod na připojení](../media/talky-navod.mp4)
+* Videokonference [návod na připojení](../../media/talky-navod.mp4)
   * Řešení domácího cvičení ze 22. hodiny
   * Zadání nového domácího cvičení na téma robomise a kostičky [zde](2019-22-domaci-cviceni2.pdf)
 
@@ -274,7 +274,7 @@ Kurz bude organizován [Lukášem Doktorem](../lectors/ldoktor.md)
     <img align="right" src="2019-23-kosticky3-small.jpg" style="height:85px">
 </a>
 
-* Videokonference [návod na připojení](../media/talky-navod.mp4)
+* Videokonference [návod na připojení](../../media/talky-navod.mp4)
   * Robomise kdo kam dojde (L1, L1, L2)
   * Dovysvětlení kostiček ze zadání 2 a pár ukázek
 * Domácí úkol
@@ -288,7 +288,7 @@ Kurz bude organizován [Lukášem Doktorem](../lectors/ldoktor.md)
     <img align="right" src="2019-24-kosticky-small.jpg" style="height:85px">
 </a>
 
-* Videokonference [návod na připojení](../media/talky-navod.mp4)
+* Videokonference [návod na připojení](../../media/talky-navod.mp4)
   * Robomise - vysvětlili jsme si, jak na cykly s počtem opakování (úroveň L3)
   * Kontrola kostiček ze [zadání 2](2019-22-domaci-cviceni2.pdf) a ukázka rozdílů mezi řezem a pohledem
   * Vysvětlení kostiček ze zadání [zadání 3](2019-23-domaci-cviceni3.pdf)
@@ -310,13 +310,13 @@ Kurz bude organizován [Lukášem Doktorem](../lectors/ldoktor.md)
 </a>
 
 
-* Videokonference [návod na připojení](../media/talky-navod.mp4)
+* Videokonference [návod na připojení](../../media/talky-navod.mp4)
   * Předvedení řešení kostiček ze zadání [zadání 3](2019-23-domaci-cviceni3.pdf)
   * Minecraft z code.org
 
 ## 26. hodina
 
-* Videokonference [návod na připojení](../media/talky-navod.mp4)
+* Videokonference [návod na připojení](../../media/talky-navod.mp4)
   * Vysvětlení událostí a prvních několik lekcí z "Taneční večírek" na code.org
   * Doplň řadu ze [zadání 4](2019-24-domaci-cviceni4.pdf) a lehké upozornění na existenci binární soustavy
   * Vysvětlení domácího úkolu "Hrací kostky" ze [zadání 5](2019-26-domaci-cviceni5.pdf)
@@ -330,7 +330,7 @@ Kurz bude organizován [Lukášem Doktorem](../lectors/ldoktor.md)
     <img align="right" src="2019-27-kostka-small.jpg" style="height:85px">
 </a>
 
-* Videokonference [návod na připojení](../media/talky-navod.mp4)
+* Videokonference [návod na připojení](../../media/talky-navod.mp4)
   * Maty se pochlubil svými obrázky z Minecraftu (Wow)
   * Konzultace výsledků hodů kostek a něco málo k pravděpodobnosti (list "Kostka 6-vyplnene" [ods](2019-27-hody-kostkou.ods) [xlsx](2019-27-hody-kostkou.xlsx))
   * Pravděpodobnost určité kartičky ze hry "Kvak!" (uhádni, co bude další kartička, průběžná aktualizace pravděpodobnosti balíčku - list "Žabky-vyplnene" [ods](2019-27-hody-kostkou.ods) [xlsx](2019-27-hody-kostkou.xlsx))
@@ -341,7 +341,7 @@ Kurz bude organizován [Lukášem Doktorem](../lectors/ldoktor.md)
 
 ## 28. hodina
 
-* Videokonference [návod na připojení](../media/talky-navod.mp4)
+* Videokonference [návod na připojení](../../media/talky-navod.mp4)
   * Maxík se pochlubil svými obrázky z Minecraftu (Paráda)
   * Naprogramování hry Flappy pomocí tutoriálu na [www.code.org](https://studio.code.org/flappy/1) viz. [domácí úkol 6](2019-27-domaci-cviceni6.pdf)
 
@@ -417,4 +417,4 @@ ke schopnosti mluvit a myslet ve více jazycích. Proto věřím, že správným
 přístupem lze začít daleko dříve a sám využívám logické hry, roboty i
 počítač ke hře a vlastně i výuce svých dětí takřka od narození.
 
-<img align="right" src="../media/robots_bottom.jpg">
+<img align="right" src="../../media/robots_bottom.jpg">
