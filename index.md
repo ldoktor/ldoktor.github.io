@@ -37,11 +37,11 @@ informace viz. email**
 * * * * *
 
 Rád bych poděkoval kolegovi Mirku Suchému, který podobné kurzy
-organizuje řadu let [V Brně](krouzek-programovani.cz/),
+organizuje řadu let [V Brně](https://krouzek-programovani.cz/),
 a který mi poskytl cenné rady do začátku. Některé z nich
 jsou volně k dispozici
 [na jeho githubu](https://github.com/xsuchy/programovani_pro_deti).
 
 <img align="right" src="media/robots_bottom.jpg">
 
-[![Licence Creative Commons](https://i.creativecommons.org/l/by-sa/4.0/88x31.png)](http://creativecommons.org/licenses/by-sa/4.0/) Toto dílo podléhá licenci [Uveďte původ-Zachovejte licenci 4.0 Mezinárodní](http://creativecommons.org/licenses/by-sa/4.0/).
+[![Licence Creative Commons](https://i.creativecommons.org/l/by-sa/4.0/88x31.png)](https://creativecommons.org/licenses/by-sa/4.0/) Toto dílo podléhá licenci [Uveďte původ-Zachovejte licenci 4.0 Mezinárodní](https://creativecommons.org/licenses/by-sa/4.0/).
