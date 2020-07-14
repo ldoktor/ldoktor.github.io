@@ -32,7 +32,7 @@ informace viz. email**
 
 ## Kontakt
 
-<img width="300" height="152" src="media/contact.png" alt="Kontaktní informace">
+<img width="405" height="193" src="media/contact.png" alt="Kontaktní informace">
 
 * * * * *
 
