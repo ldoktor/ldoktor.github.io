@@ -10,9 +10,8 @@ Cílem tohoto kurzu je pokračování v rozvoji systematického
 myšlení, hlubší poznávání světa informační techniky
 a osvojení si základů elektrotechniky.
 
-Kurz bude probíhat 1x týdně, detaily budou upřesněny po zveřejnění
-rozvrhů. Pravděpodobně bude časově navazovat na kurz začátečníků,
-čili start buď ve 14:10 či 15:10.
+Kurz bude probíhat 1x týdně, každý čtvrtek od 15:05 v počítačové
+učebně.
 
 V kurzu budeme využívat robůtky [Cubetto](https://www.primotoys.com),
 [Beebot](https://www.bee-bot.us/) i [Ozobot](https://ozobot.com/).

@@ -6,9 +6,7 @@ tříd dětí z libovolných škol. Cílem těchto kurzů je rozvíjení
 přirozené touhy dětí po poznávání okolního světa s důrazem na
 techniku a rozvoj systematického myšlení.
 
-Kurz bude probíhat 1x týdně, detaily budou upřesněny po zveřejnění
-rozvrhů, pravděpodobně ihned po obědě (cca od 13:00, případně
-od 14:00 dle možností).
+Kurz bude probíhat 1x týdně každý čtvrtek od 14:00.
 
 V kurzu budeme využívat robůtky [Cubetto](https://www.primotoys.com),
 [Beebot](https://www.bee-bot.us/) i [Ozobot](https://ozobot.com/).
