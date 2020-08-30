@@ -20,7 +20,7 @@ základních škol.**
 ## Ročníky:
 
 * ZŠ Nuselská 2019/2020  - [začátečníci](courses/2019_2020/zacatecnici.md) &nbsp;&nbsp; ([letáček](courses/2019_2020/2019-nuselska.jpg), [přihláška](courses/2019_2020/2019-prihlaska.pdf))
-* ZŠ Nuselská 2020/2021 - [začátečníci](courses/2020_2021/zacatecnici.md), [pokročilí](courses/2020_2021/pokrocili.md) &nbsp;&nbsp; ([letáček](courses/2020_2021/letacek.jpg), [miniletáček](courses/2020_2021/miniletacek.pdf))
+* ZŠ Nuselská 2020/2021 - [začátečníci](courses/2020_2021/zacatecnici.md), [pokročilí](courses/2020_2021/pokrocili.md) &nbsp;&nbsp; ([letáček](courses/2020_2021/letacek.jpg), [miniletáček](courses/2020_2021/miniletacek.pdf), [přihláška](courses/2020_2021/prihlaska.pdf))
 
 ## Lektoři
 
