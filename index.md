@@ -17,10 +17,13 @@ ukázka z přechozího ročníku [zde](courses/2019_2020/zacatecnici.md)
 Přihlásit se mohou jak děti ze ZŠ Nuselská, tak i žáci z jiných
 základních škol.**
 
-## Ročníky:
+## Současné kurzy:
+
+* ZŠ Nuselská 2020/2021 - [začátečníci](courses/2020_2021/zacatecnici.md), [pokročilí](courses/2020_2021/pokrocili.md) &nbsp;&nbsp; ([letáček](courses/2020_2021/letacek.jpg), [miniletáček](courses/2020_2021/miniletacek.pdf), [přihláška](courses/2020_2021/prihlaska.pdf))
+
+## Archiv kurzů:
 
 * ZŠ Nuselská 2019/2020  - [začátečníci](courses/2019_2020/zacatecnici.md) &nbsp;&nbsp; ([letáček](courses/2019_2020/2019-nuselska.jpg), [přihláška](courses/2019_2020/2019-prihlaska.pdf))
-* ZŠ Nuselská 2020/2021 - [začátečníci](courses/2020_2021/zacatecnici.md), [pokročilí](courses/2020_2021/pokrocili.md) &nbsp;&nbsp; ([letáček](courses/2020_2021/letacek.jpg), [miniletáček](courses/2020_2021/miniletacek.pdf), [přihláška](courses/2020_2021/prihlaska.pdf))
 
 ## Lektoři
 
