@@ -1,25 +1,29 @@
 # 2020/2021
 
-Kurz **Programování na Nuselské** bude probíhat od října 2020
+**Vzhledem k nedostatku studentů nebude kurz pro začátečníky
+v prvním pololetí otevřen. V případě zájmu je možné otevřít
+kurz v pololetí druhém.**
+
+~~Kurz **Programování na Nuselské** bude probíhat od října 2020
 a je určen pro děti prvních<sup>[1](#footnote1)</sup> a druhých
 tříd dětí z libovolných škol. Cílem těchto kurzů je rozvíjení
 přirozené touhy dětí po poznávání okolního světa s důrazem na
-techniku a rozvoj systematického myšlení.
+techniku a rozvoj systematického myšlení.~~
 
-Kurz bude probíhat 1x týdně každý čtvrtek od 14:00.
+~~Kurz bude probíhat 1x týdně každý čtvrtek od 14:00.~~
 
-V kurzu budeme využívat robůtky [Cubetto](https://www.primotoys.com),
+~~V kurzu budeme využívat robůtky [Cubetto](https://www.primotoys.com),
 [Beebot](https://www.bee-bot.us/) i [Ozobot](https://ozobot.com/).
 Zároveň se budeme věnovat i práci na PC pomocí open source aplikace
 [GCompris](https://gcompris.net) a začneme kurzy z platformy
 [code.org](https://www.code.org). Pro zpestření budou kurzy provázeny
-tvůrčími aktivitami s papírem, kostkami a jinými rekvizitami.
+tvůrčími aktivitami s papírem, kostkami a jinými rekvizitami.~~
 
-Cílem kurzu není vzdělat hotového programátora, ale rozvíjet logické
+~~Cílem kurzu není vzdělat hotového programátora, ale rozvíjet logické
 myšlení, algoritmizaci a jiné vlastnosti, které se dětem budou hodit
-při studiu jakéhokoliv oboru.
+při studiu jakéhokoliv oboru.~~
 
-Kurz bude organizován a veden [Lukášem Doktorem](../lectors/ldoktor.md)
+~~Kurz bude organizován a veden [Lukášem Doktorem](../lectors/ldoktor.md)~~
 
 * * * * * * * * *
 
