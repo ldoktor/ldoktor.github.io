@@ -29,4 +29,20 @@ při studiu jakéhokoliv oboru.
 
 Kurz bude organizován a veden [Lukášem Doktorem](../lectors/ldoktor.md)
 
+## 1. hodina
+
+<a href="pokrocili-1-01-u-tabule.jpg">
+    <img align="right" src="pokrocili-1-01-u-tabule-small.jpg" style="height:85px">
+</a>
+
+* Seznámení s lektorem a ostatními spolužáky
+* Přihlášení k počítačům - drobné technické potíže
+* Stránky www.code.org
+  * Nastavení účtu
+  * Programování na papíru (tabuli)
+* Demonstrace pomůcek
+  * Beebot
+  * Ozobot
+  * Micro:bit + příslušenství
+
 <img align="right" src="../../media/robots_bottom.jpg">
