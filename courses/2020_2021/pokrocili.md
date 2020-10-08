@@ -45,4 +45,23 @@ Kurz bude organizován a veden [Lukášem Doktorem](../lectors/ldoktor.md)
   * Ozobot
   * Micro:bit + příslušenství
 
+## 2. hodina
+
+<a href="pokrocili-1-02-code-org2.jpg">
+    <img align="right" src="pokrocili-1-02-code-org2-small.jpg" style="height:85px">
+</a>
+<a href="pokrocili-1-02-code-org.jpg">
+    <img align="right" src="pokrocili-1-02-code-org-small.jpg" style="height:85px">
+</a>
+<a href="pokrocili-1-02-beeboti.jpg">
+    <img align="right" src="pokrocili-1-02-beeboti-small.jpg" style="height:85px">
+</a>
+
+* Beeboti
+  * seznámení
+  * základy pohybu po mapě
+  * opakovaný pohyb
+* www.code.org
+  * 3 - Angry birds bludiště
+
 <img align="right" src="../../media/robots_bottom.jpg">
