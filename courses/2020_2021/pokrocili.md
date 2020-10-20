@@ -64,4 +64,23 @@ Kurz bude organizován a veden [Lukášem Doktorem](../lectors/ldoktor.md)
 * www.code.org
   * 3 - Angry birds bludiště
 
+## 3. hodina
+
+<a href="pokrocili-1-03-code-org.jpg">
+    <img align="right" src="pokrocili-1-03-code-org-small.jpg" style="height:85px">
+</a>
+
+* Videokonference [návod na připojení](../../media/jitsi-navod.mp4)
+  * Dokončení lekce 3 - Bludiště
+  * Uvedení do lekce 4 - Umělec
+    * Vždy čtěte zadání
+    * Nezapomeňte využívat nápovědy (žárovka nalevo od textu zadání)
+    * Pixely jsou čtverečky, ze kterých se skládá obraz
+    * Otáčíme se o úhel udávaný ve stupních, 90° je pravý úhel a odpovídá našemu "otočení se" v předchozí lekci. Bližší info <a href="https://www.slideserve.com/trang/m-en-hl">zde</a>
+  * V rámci možností mohou děti samostatně pokračovat v umělcovi
+    * Když něco nepůjde, doporučuji pauzu a zkusit to druhý den (či později)
+    * Když se i tak nebude dařit, je možné přeskočit úroveň
+    * Rodiče by neměli pomáhat
+  * Příště vyjasníme případné nesrovnalosti, dokončíme umělce a začneme cykly
+
 <img align="right" src="../../media/robots_bottom.jpg">
