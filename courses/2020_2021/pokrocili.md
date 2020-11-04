@@ -83,4 +83,16 @@ Kurz bude organizován a veden [Lukášem Doktorem](../lectors/ldoktor.md)
     * Rodiče by neměli pomáhat
   * Příště vyjasníme případné nesrovnalosti, dokončíme umělce a začneme cykly
 
+## 4. hodina
+
+* Videokonference [návod na připojení](../../media/jitsi-navod.mp4)
+  * Dokončení lekce 4 - Umělec
+    * Opakuji, nezapomeňte číst zadání a případně použít nápovědu (žárovka nalevo od textu zadání)
+  * Lehký úvod do cyklů/opakování
+  * Domácí úkol:
+    * Všímejte si, kde se v okolním světě vyskytuje či dá využít opakování (např. dlaždičky, plot, hudba, ...)
+    * Pročtěte a porovnejte jednotlivá zadání z [[pdf](pokrocili-1-04-peceni.pdf), [odt](pokrocili-1-04-peceni.odt)]
+    * Opravite "Pseudo-kód pro počítač" v receptu [[pdf](pokrocili-1-04-peceni.pdf), [odt](pokrocili-1-04-peceni.odt)] za pomocí opakování, viz. ukázka v prvních dvou krocích.
+    * Volitelně se můžete pokusit dort upéci. Který návod Vám vyhovoval nejvíce?
+
 <img align="right" src="../../media/robots_bottom.jpg">
