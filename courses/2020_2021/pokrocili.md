@@ -95,4 +95,22 @@ Kurz bude organizován a veden [Lukášem Doktorem](../lectors/ldoktor.md)
     * Opravite "Pseudo-kód pro počítač" v receptu [[pdf](pokrocili-1-04-peceni.pdf), [odt](pokrocili-1-04-peceni.odt)] za pomocí opakování, viz. ukázka v prvních dvou krocích.
     * Volitelně se můžete pokusit dort upéci. Který návod Vám vyhovoval nejvíce?
 
+## 5. hodina
+
+<a href="pokrocili-1-05-dort2.jpg">
+    <img align="right" src="pokrocili-1-05-dort2-small.jpg" style="height:85px">
+</a>
+<a href="pokrocili-1-05-dort1.jpg">
+    <img align="right" src="pokrocili-1-05-dort1-small.jpg" style="height:85px">
+</a>
+
+* Videokonference [návod na připojení](../../media/jitsi-navod.mp4)
+  * Řešení k domácímu úkolu [[pdf](pokrocili-1-05-peceni-reseni.pdf), [odt](pokrocili-1-05-peceni-reseni.odt)]
+    * Doporučuji projít s dětmi, je důležité uvědomit si rozdíl mezi opakováním jedné instrukce a opakování sledu několika instrukcí
+  * www.code.org - lekce 6 - Bludiště cykly
+    * Jednoduchá opakování, opakování sledu instrukcí/bločků a kombinace
+    * Doporučuji projít si všechny úrovně z této lekce a pokusit se dotáhnout je do kompletního řešení. To poznáme tmavě zelenou barvou oproti světle zelené která funguje, ale není optimální.
+  * Domácí úkol:
+    * Procvičovat cykly/opakování ať už v reálném světě (vaření, kutění, skládání z lega, ...), tak v lekci 6 na code.org. Začátky jsou těžké, ale postupně by mělo vše začít do sebe zapadat.
+
 <img align="right" src="../../media/robots_bottom.jpg">
