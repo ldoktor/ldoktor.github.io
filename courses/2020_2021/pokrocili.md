@@ -113,4 +113,26 @@ Kurz bude organizován a veden [Lukášem Doktorem](../lectors/ldoktor.md)
   * Domácí úkol:
     * Procvičovat cykly/opakování ať už v reálném světě (vaření, kutění, skládání z lega, ...), tak v lekci 6 na code.org. Začátky jsou těžké, ale postupně by mělo vše začít do sebe zapadat.
 
+## 6. hodina
+
+<a href="pokrocili-1-06-beebot-code.org.jpg">
+    <img align="right" src="pokrocili-1-06-beebot-code.org-small.jpg" style="height:85px">
+</a>
+<a href="pokrocili-1-06-code.org.jpg">
+    <img align="right" src="pokrocili-1-06-code.org-small.jpg" style="height:85px">
+</a>
+
+* www.code.org
+  * Procvičování lekce 6 - Bludiště cykly
+  * Zkoušení úrovní z www.code.org se včelkami, cyklování pomocí opakovaného spouštění
+* Seznámení s prostředím Scratch
+  * Odkaz na editor <a href="https://scratch.mit.edu/projects/editor/">zde</a>
+    * Vlevo nahoře přepínání *Scénáře*, *Kostýmy* a *Zvuky*
+    * Po levé straně *skupiny funkčních bločků*, vedle jednotlivé *bločky*
+    * Uprostřed *kód* aktuálně vybrané postavy
+    * V pravo nahoře *náhled programu*
+    * V pravo dole výběr jednotlivých *postav* a *scény*
+  * Veškerý kód musí někde začínat, k tomu slouží bločky *Události*
+  * Jednoduchá ukázka rozpohybované kočičky <a href="https://scratch.mit.edu/projects/457640049/editor/">zde</a>
+
 <img align="right" src="../../media/robots_bottom.jpg">
