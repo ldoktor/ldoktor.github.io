@@ -9,10 +9,8 @@ jako připomínka, či jiným lektorům jako zdroj informací.
 
 ## Aktuality:
 
-**V prvním pololetí se bude konat pouze kurz pokročilí
-určen pro žáky 3. tříd, popř. 2. tříd v případě absolvování
-kurzu začátečníků. V případě zájmu je možno otevřít
-kurz začátečníků od druhého pololetí.**
+**Od 3.12.2020 probíhá do odvolání výuka v prostorách MammaCentra, U Stadionu
+2013, Havlíčkův Brod**
 
 ## Současné kurzy:
 
