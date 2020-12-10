@@ -135,4 +135,25 @@ Kurz bude organizován a veden [Lukášem Doktorem](../lectors/ldoktor.md)
   * Veškerý kód musí někde začínat, k tomu slouží bločky *Události*
   * Jednoduchá ukázka rozpohybované kočičky <a href="https://scratch.mit.edu/projects/457640049/editor/">zde</a>
 
+## 7. hodina
+
+<a href="pokrocili-1-07-betlem-periodicky-presun.jpg">
+    <img align="right" src="pokrocili-1-07-betlem-periodicky-presun-small.jpg" style="height:85px">
+</a>
+<a href="pokrocili-1-07-betlem-presun.jpg">
+    <img align="right" src="pokrocili-1-07-betlem-presun-small.jpg" style="height:85px">
+</a>
+<a href="pokrocili-1-07-betlem-pohyb.jpg">
+    <img align="right" src="pokrocili-1-07-betlem-pohyb-small.jpg" style="height:85px">
+</a>
+<a href="pokrocili-1-07-betlem-inspirace.jpg">
+    <img align="right" src="pokrocili-1-07-betlem-inspirace-small.jpg" style="height:85px">
+</a>
+
+* <a href="https://scratch.mit.edu/projects/editor/">Scratch</a>
+  * Příprava betlému
+    * Vkládání spritů ze souboru (najet myší a vybrat tlačítko "nahrát postavu")
+    * Rozpohybování objektu pomocí několika spritů (další kostým)
+    * Posun objektů (skoč na, klouzej na)
+
 <img align="right" src="../../media/robots_bottom.jpg">
