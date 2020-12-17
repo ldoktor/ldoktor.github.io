@@ -156,4 +156,15 @@ Kurz bude organizován a veden [Lukášem Doktorem](../lectors/ldoktor.md)
     * Rozpohybování objektu pomocí několika spritů (další kostým)
     * Posun objektů (skoč na, klouzej na)
 
+## 8. hodina
+
+<a href="pokrocili-1-08-scratch.jpg">
+    <img align="right" src="pokrocili-1-08-scratch-small.jpg" style="height:85px">
+</a>
+
+* <a href="https://scratch.mit.edu/projects/editor/">Scratch</a>
+  * Vylepšování betlému v programu <a href="https://scratch.mit.edu/projects/editor/">Scratch</a>
+  * Ukázky vybraných kódů pro inspiraci [zde](pokrocili-1-08-betlem-kod.png)
+  * Ukázkové řešení <a href="https://scratch.mit.edu/projects/461706147/">zde</a>, doporučuji prostudovat, upravit a můžete se na příští hodině pochlubit.
+
 <img align="right" src="../../media/robots_bottom.jpg">
