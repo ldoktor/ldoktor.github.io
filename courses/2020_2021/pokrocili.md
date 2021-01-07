@@ -167,4 +167,17 @@ Kurz bude organizován a veden [Lukášem Doktorem](../lectors/ldoktor.md)
   * Ukázky vybraných kódů pro inspiraci [zde](pokrocili-1-08-betlem-kod.png)
   * Ukázkové řešení <a href="https://scratch.mit.edu/projects/461706147/">zde</a>, doporučuji prostudovat, upravit a můžete se na příští hodině pochlubit.
 
+## 9. hodina
+
+
+<a href="pokrocili-1-09-robomise.jpg">
+    <img align="right" src="pokrocili-1-09-robomise-small.jpg" style="height:85px">
+</a>
+
+* Videokonference [návod na připojení](../../media/jitsi-navod.mp4)
+  * <a href="https://robomise.cz">https://robomise.cz</a>
+    * Kvůli stávkujícím serverům Scratche jsme si udělali krátkou odbočku a vyzkoušeli jsme robomisi
+    * Děti si mohou vyzkoušet všechny úrovně až po "L3 - Ukliď si cestu"
+    * Úroveň L4 obsahuje podmínky, které budeme probírat až později
+
 <img align="right" src="../../media/robots_bottom.jpg">
