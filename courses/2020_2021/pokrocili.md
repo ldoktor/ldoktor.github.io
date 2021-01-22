@@ -169,7 +169,6 @@ Kurz bude organizován a veden [Lukášem Doktorem](../lectors/ldoktor.md)
 
 ## 9. hodina
 
-
 <a href="pokrocili-1-09-robomise.jpg">
     <img align="right" src="pokrocili-1-09-robomise-small.jpg" style="height:85px">
 </a>
@@ -179,5 +178,19 @@ Kurz bude organizován a veden [Lukášem Doktorem](../lectors/ldoktor.md)
     * Kvůli stávkujícím serverům Scratche jsme si udělali krátkou odbočku a vyzkoušeli jsme robomisi
     * Děti si mohou vyzkoušet všechny úrovně až po "L3 - Ukliď si cestu"
     * Úroveň L4 obsahuje podmínky, které budeme probírat až později
+
+## 10. hodina
+
+<a href="pokrocili-1-10-scratch2.jpg">
+    <img align="right" src="pokrocili-1-10-scratch2-small.jpg" style="height:85px">
+</a>
+<a href="pokrocili-1-10-scratch.jpg">
+    <img align="right" src="pokrocili-1-10-scratch-small.jpg" style="height:85px">
+</a>
+
+* Videokonference [návod na připojení](../../media/jitsi-navod.mp4)
+  * <a href="https://scratch.mit.edu/projects/editor/">Scratch</a> - hra "chytni kočku"
+    * Návod pro osvěžení si paměti ve formátech: [pdf](pokrocili-1-10-kocka.pdf) či [odt](pokrocili-1-10-kocka.odt)
+    * <a href="https://scratch.mit.edu/projects/470669556/">Odkaz na vytvořenou hru</a>
 
 <img align="right" src="../../media/robots_bottom.jpg">
