@@ -193,4 +193,19 @@ Kurz bude organizován a veden [Lukášem Doktorem](../lectors/ldoktor.md)
     * Návod pro osvěžení si paměti ve formátech: [pdf](pokrocili-1-10-kocka.pdf) či [odt](pokrocili-1-10-kocka.odt)
     * <a href="https://scratch.mit.edu/projects/470669556/">Odkaz na vytvořenou hru</a>
 
+## 11. hodina
+
+<a href="pokrocili-2-01-chytani-ovoce2.jpg">
+    <img align="right" src="pokrocili-2-01-chytani-ovoce2-small.jpg" style="height:85px">
+</a>
+<a href="pokrocili-2-01-chytani-ovoce1.jpg">
+    <img align="right" src="pokrocili-2-01-chytani-ovoce1-small.jpg" style="height:85px">
+</a>
+
+* Videokonference [návod na připojení](../../media/jitsi-navod.mp4)
+  * <a href="https://scratch.mit.edu/projects/editor/">Scratch</a> - hra "chytání padajícího ovoce I."
+    * Návod pro osvěžení si paměti ve formátech: [pdf](pokrocili-2-01-chytani-ovoce.pdf) či [odt](pokrocili-2-01-chytani-ovoce.odt)
+    * Stihli jsme jednoduchý pohyb vlevo a vpravo s pohybem spritu a generování ovoce náhodně po celé ploše
+    * <a href="https://scratch.mit.edu/projects/441005609/">Odkaz na vytvořenou hru</a>
+
 <img align="right" src="../../media/robots_bottom.jpg">
