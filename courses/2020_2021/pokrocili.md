@@ -204,8 +204,26 @@ Kurz bude organizován a veden [Lukášem Doktorem](../lectors/ldoktor.md)
 
 * Videokonference [návod na připojení](../../media/jitsi-navod.mp4)
   * <a href="https://scratch.mit.edu/projects/editor/">Scratch</a> - hra "chytání padajícího ovoce I."
-    * Návod pro osvěžení si paměti ve formátech: [pdf](pokrocili-2-01-chytani-ovoce.pdf) či [odt](pokrocili-2-01-chytani-ovoce.odt)
+    * Návod pro osvěžení si paměti ve formátech: [pdf](pokrocili-2-01-chytani-ovoce-v2.pdf) či [odt](pokrocili-2-01-chytani-ovoce-v2.odt)
     * Stihli jsme jednoduchý pohyb vlevo a vpravo s pohybem spritu a generování ovoce náhodně po celé ploše
     * <a href="https://scratch.mit.edu/projects/441005609/">Odkaz na vytvořenou hru</a>
+    * <a href="https://scratch.mit.edu/projects/492123452/">Odkaz na námi vytvořenou část 1</a>
+
+## 12. hodina
+
+<a href="pokrocili-2-02-chytani-ovoce1.jpg">
+    <img align="right" src="pokrocili-2-02-chytani-ovoce1-small.jpg" style="height:85px">
+</a>
+
+* Videokonference [návod na připojení](../../media/jitsi-navod.mp4)
+  * <a href="https://scratch.mit.edu/projects/editor/">Scratch</a> - hra "chytání padajícího ovoce I."
+    * Návod pro osvěžení si paměti ve formátech: [pdf](pokrocili-2-01-chytani-ovoce-v2.pdf) či [odt](pokrocili-2-01-chytani-ovoce-v2.odt)
+    * Přidali jsme si další kostýmy a využili jsme bloček "náhodné číslo od XXX do YYY" abychom náhodně měnili kostýmy.
+    * Naučili jsme ovoce padat. Gravitaci jsme implementovali pomocí nekonečného cyklu "změň Y o -3".
+    * Poté jsme opět využili "náhodné číslo od XXX do YYY" abychom generovali na náhodných pozicích ale pouze v horní části obrazovky.
+    * Nakonec jsme se vrhnuli do podmínek. Naučili jsme panáčka ovoce chytat a také jsme si nadefinovali, co se stane, pokud ovoce spadne na zem.
+    * <a href="https://scratch.mit.edu/projects/441005609/">Odkaz na vytvořenou hru</a>
+    * <a href="https://scratch.mit.edu/projects/493011380/">Odkaz na námi vytvořenou část 2</a>
+
 
 <img align="right" src="../../media/robots_bottom.jpg">
