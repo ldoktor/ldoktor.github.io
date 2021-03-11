@@ -216,7 +216,7 @@ Kurz bude organizován a veden [Lukášem Doktorem](../lectors/ldoktor.md)
 </a>
 
 * Videokonference [návod na připojení](../../media/jitsi-navod.mp4)
-  * <a href="https://scratch.mit.edu/projects/editor/">Scratch</a> - hra "chytání padajícího ovoce I."
+  * <a href="https://scratch.mit.edu/projects/editor/">Scratch</a> - hra "chytání padajícího ovoce II."
     * Návod pro osvěžení si paměti ve formátech: [pdf](pokrocili-2-01-chytani-ovoce-v2.pdf) či [odt](pokrocili-2-01-chytani-ovoce-v2.odt)
     * Přidali jsme si další kostýmy a využili jsme bloček "náhodné číslo od XXX do YYY" abychom náhodně měnili kostýmy.
     * Naučili jsme ovoce padat. Gravitaci jsme implementovali pomocí nekonečného cyklu "změň Y o -3".
@@ -225,5 +225,18 @@ Kurz bude organizován a veden [Lukášem Doktorem](../lectors/ldoktor.md)
     * <a href="https://scratch.mit.edu/projects/441005609/">Odkaz na vytvořenou hru</a>
     * <a href="https://scratch.mit.edu/projects/493011380/">Odkaz na námi vytvořenou část 2</a>
 
+## 13. hodina
+
+* Videokonference [návod na připojení](../../media/jitsi-navod.mp4)
+  * <a href="https://scratch.mit.edu/projects/editor/">Scratch</a> - hra "chytání padajícího ovoce III."
+    * Znovu jsme si prošli kód, podmínky jsou prostě fuška
+    * Přidali jsme do hry zvuky při chycení a pádu ovoce (ach ty podmínky)
+    * Nahradili jsme ovládání pomocí událostí takzvaným "pollingem", čili smyčkou neustále kontrolující stav stisknutí kláves
+      * Rozdíl je při podržení klávesy kde ovládání pomocí události (tlačítka "a" a "d") posune panáčka a následuje krátká pauza a teprve potom se panáček rozběhne. V poll módu kdykoliv je klávesa držena panáček utíká a s jejím uvolněním okamžitě zastavuje.
+      * Opět jde o demonstraci podmínek
+    * Nestihli jsme dodělat podmínky pro ukončení hry, ale domluvili jsme se na krátké pauze od Scratche, proto přikládám ukázku, která tyto podmínky obsahuje. Doporučuji projít, pohrát si a případně poupravit doma.
+    * <a href="https://scratch.mit.edu/projects/441005609/">Odkaz na vytvořenou hru</a>
+    * <a href="https://scratch.mit.edu/projects/493011380/">Odkaz na námi vytvořenou část 2</a>
+    * <a href="https://scratch.mit.edu/projects/499965964/">Odkaz na námi vytvořenou část 3 (včetně podmínek pro konec hry)</a>
 
 <img align="right" src="../../media/robots_bottom.jpg">
