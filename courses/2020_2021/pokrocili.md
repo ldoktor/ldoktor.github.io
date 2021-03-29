@@ -239,4 +239,36 @@ Kurz bude organizován a veden [Lukášem Doktorem](../lectors/ldoktor.md)
     * <a href="https://scratch.mit.edu/projects/493011380/">Odkaz na námi vytvořenou část 2</a>
     * <a href="https://scratch.mit.edu/projects/499965964/">Odkaz na námi vytvořenou část 3 (včetně podmínek pro konec hry)</a>
 
+## 14. hodina
+
+<a href="pokrocili-2-04-codecombat.jpg">
+    <img align="right" src="pokrocili-2-04-codecombat-small.jpg" style="height:85px">
+</a>
+
+* Videokonference [návod na připojení](../../media/jitsi-navod.mp4)
+  * <a href="https://codecombat.com/play/dungeon">Code Combat</a>
+    * Registrace do studentského účtu bez emailu (možno hrát bez uložení bez registrace)
+    * Vysvětlení prostředí:
+      * panel hry
+      * panel metod
+      * panel kódu
+      * tlačítko nápověda
+      * tlačítka na spuštění
+    * Programování textově v Pythonu
+      * Vykonávání po řádcích
+      * objekt `hero` je náš hrdina
+      * `hero.PŘÍKAZ()` - řekne hrdinovy aby vykonal `PŘÍKAZ`
+      * `hero.PŘÍKAZ(1)` - řekne hrdinovi aby vykonal `PŘÍKAZ` s parametrem `1`
+    * Slovníček
+      * hero - hrdina
+      * move - posuň se/jdi
+      * up - nahoru
+      * down - dolu
+      * left - doleva
+      * right - doprava
+      * say - řekni
+      * attack - zaútoč
+    * Procházení vlastním tempem - 3 - 7 úroveň
+    * POZOR na překlepy, neplatný kód je označen červeně
+
 <img align="right" src="../../media/robots_bottom.jpg">
