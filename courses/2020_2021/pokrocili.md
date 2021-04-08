@@ -259,6 +259,7 @@ Kurz bude organizován a veden [Lukášem Doktorem](../lectors/ldoktor.md)
       * objekt `hero` je náš hrdina
       * `hero.PŘÍKAZ()` - řekne hrdinovy aby vykonal `PŘÍKAZ`
       * `hero.PŘÍKAZ(1)` - řekne hrdinovi aby vykonal `PŘÍKAZ` s parametrem `1`
+      * seznam příkazů <a href="pokrocili-2-04-codecombat-prikazy.jpg">zde</a>
     * Slovníček
       * hero - hrdina
       * move - posuň se/jdi
