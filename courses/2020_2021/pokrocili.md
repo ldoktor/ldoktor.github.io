@@ -272,4 +272,17 @@ Kurz bude organizován a veden [Lukášem Doktorem](../lectors/ldoktor.md)
     * Procházení vlastním tempem - 3 - 7 úroveň
     * POZOR na překlepy, neplatný kód je označen červeně
 
+## 15. hodina
+
+<a href="pokrocili-2-05-codecombat.jpg">
+    <img align="right" src="pokrocili-2-05-codecombat-small.jpg" style="height:85px">
+</a>
+
+* Videokonference [návod na připojení](../../media/talky-navod.mp4)
+  * <a href="https://codecombat.com/play/dungeon">Code Combat</a>
+    * Pokračování z minula
+    * seznam příkazů <a href="pokrocili-2-04-codecombat-prikazy.jpg">zde</a>
+    * pozor na mezery, velikost písmen a překlepy, v Pythonu jsou důležité
+
+
 <img align="right" src="../../media/robots_bottom.jpg">
