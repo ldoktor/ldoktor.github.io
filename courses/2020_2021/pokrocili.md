@@ -285,4 +285,14 @@ Kurz bude organizován a veden [Lukášem Doktorem](../lectors/ldoktor.md)
     * pozor na mezery, velikost písmen a překlepy, v Pythonu jsou důležité
 
 
+## 16. hodina
+
+* Videokonference [návod na připojení](../../media/talky-navod.mp4)
+  * Na oživení jsme se pokusili projít minovým polem
+    * zadání ve formátech: <a href="pokrocili-2-06-miny.ods">ods</a>, <a href="pokrocili-2-06-miny.xlsx">xlsx</a> a <a href="pokrocili-2-06-miny.pdf">pdf</a>
+    * <a href="pokrocili-2-06-miny-reseni.pdf">ukázkové řešení</a>
+  * <a href="https://codecombat.com/play/dungeon">Code Combat</a>
+    * Pokračování z minula (kola 3 - 14)
+    * Největší problém je přihlašování :-(
+
 <img align="right" src="../../media/robots_bottom.jpg">
