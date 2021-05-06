@@ -295,4 +295,12 @@ Kurz bude organizován a veden [Lukášem Doktorem](../lectors/ldoktor.md)
     * Pokračování z minula (kola 3 - 14)
     * Největší problém je přihlašování :-(
 
+## 17. hodina
+
+* Videokonference [návod na připojení](../../media/talky-navod.mp4)
+  * <a href="https://codecombat.com/play/dungeon">Code Combat</a>
+    * Pokračování z minula (kola 3 - 15)
+    * Zakončení látky, děti si mohou pokračovat dle libosti doma
+  * Jako nastínění další látky jsme si vysvětlili, jak fungoval trik s <a href="pokrocili-2-07-kouzlo-hulka.jpg">kouzelnou hůlkou</a>. O detekci energie opravdu nešlo, vše zajišťovala dvojice Micro:bitů. Na kód se můžete podívat zde: <a href="https://makecode.microbit.org/_hmpUktPEw5ee">vysílače</a> a <a href="https://makecode.microbit.org/_TodHPk1ChTtq">přijímač</a>
+
 <img align="right" src="../../media/robots_bottom.jpg">
