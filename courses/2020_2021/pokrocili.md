@@ -303,4 +303,18 @@ Kurz bude organizován a veden [Lukášem Doktorem](../lectors/ldoktor.md)
     * Zakončení látky, děti si mohou pokračovat dle libosti doma
   * Jako nastínění další látky jsme si vysvětlili, jak fungoval trik s <a href="pokrocili-2-07-kouzlo-hulka.jpg">kouzelnou hůlkou</a>. O detekci energie opravdu nešlo, vše zajišťovala dvojice Micro:bitů. Na kód se můžete podívat zde: <a href="https://makecode.microbit.org/_hmpUktPEw5ee">vysílače</a> a <a href="https://makecode.microbit.org/_TodHPk1ChTtq">přijímač</a>
 
+## 18. hodina
+
+* Rozebírání počítače
+  * Počítač, monitor a klávesnice
+  * Co je to:
+    * Základní deska
+    * Zdroj
+    * Procesor
+    * Paměť RAM
+    * Grafická karta
+    * Pevný disk
+  * Jak spustit počítač bez bedny/tlačítka?
+  * Co se stane, když sundám chladič z (modernějšího) procesoru?
+
 <img align="right" src="../../media/robots_bottom.jpg">
