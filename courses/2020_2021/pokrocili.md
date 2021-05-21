@@ -317,4 +317,26 @@ Kurz bude organizován a veden [Lukášem Doktorem](../lectors/ldoktor.md)
   * Jak spustit počítač bez bedny/tlačítka?
   * Co se stane, když sundám chladič z (modernějšího) procesoru?
 
+## 19. hodina
+
+<a href="pokrocili-2-09-hra-na-procesor-pc-increment.jpg">
+    <img align="right" src="pokrocili-2-09-hra-na-procesor-pc-increment-small.jpg" style="height:85px">
+</a>
+<a href="pokrocili-2-09-hra-na-procesor.jpg">
+    <img align="right" src="pokrocili-2-09-hra-na-procesor-small.jpg" style="height:85px">
+</a>
+
+* Hra na procesor
+  * Na diagramu procesoru MP-4 jsme si ukázali, jak funguje jednoduchý procesor. Schéma + ukázkový program jsou k dispozici ve formátech: <a href="pokrocili-2-09-hra-na-procesor.ods">ods</a> a <a href="pokrocili-2-09-hra-na-procesor.pdf">pdf</a>
+  * Princip:
+    * Po spuštění je vše kromě Paměti **ROM** vynulováno, v Paměti **ROM** je kód z materiálů ze stránky 2
+    * Programový čítač **PC** nastaví adresu Paměti ROM na 00
+    * Řadič **Control** přečte instrukci (první číslo z paměti) z nastavené adresy a dle instrukce řídí posloupnost mikroinstrukcí:
+      * LDA - Načte operand (druhé číslo z paměti) a přes sběrnici **Bus** a Aritmeticko-logickou jednotku **ALU** jej uloží do Akumulátoru **Acc**
+      * ADD - Načte operand (druhé číslo z paměti) a přes sběrnici **Bus** jej pošle do Aritmeticko-logickou jednotku **ALU** která přište toto číslo k číslu uloženému v Akumulátoru **Acc**. Výsledek uloži opět do Akumulátoru **Acc**
+      * JMP2, n - Pokud je v Akumulátoru **Acc** hodnota 0, změní obsah Programového čítače **PC** na hodnotu operandu (druhé číslo z paměti)
+    * Až na výjimky je inkrementován Programový čátač **PC**, čímž se změní adresa Paměti ROM a vše pokračuje do přerušení proudu či do vykonání instrukce HLT (Halt - stop)
+  * Pro výstup jsme uvažovali, že na výstupním portu A je připojena jednoduchá tiskárna, která kazdý výstup detekuje, dekóduje pomocí ASCII tabulky a zapíše.
+  * **HELLO WORLD** == "Ahoj světe". Tato věta se často používá pro demonstraci základní syntaxe programovacího jazyku. Více informací <a href="https://cs.wikipedia.org/wiki/Hello_world">na Wikipedii</a>
+
 <img align="right" src="../../media/robots_bottom.jpg">
