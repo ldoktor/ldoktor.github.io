@@ -305,6 +305,10 @@ Kurz bude organizován a veden [Lukášem Doktorem](../lectors/ldoktor.md)
 
 ## 18. hodina
 
+<a href="pokrocili-2-08-rozborka-pc.jpg">
+    <img align="right" src="pokrocili-2-08-rozborka-pc-small.jpg" style="height:85px">
+</a>
+
 * Rozebírání počítače
   * Počítač, monitor a klávesnice
   * Co je to:
@@ -338,5 +342,31 @@ Kurz bude organizován a veden [Lukášem Doktorem](../lectors/ldoktor.md)
     * Až na výjimky je inkrementován Programový čátač **PC**, čímž se změní adresa Paměti ROM a vše pokračuje do přerušení proudu či do vykonání instrukce HLT (Halt - stop)
   * Pro výstup jsme uvažovali, že na výstupním portu A je připojena jednoduchá tiskárna, která kazdý výstup detekuje, dekóduje pomocí ASCII tabulky a zapíše.
   * **HELLO WORLD** == "Ahoj světe". Tato věta se často používá pro demonstraci základní syntaxe programovacího jazyku. Více informací <a href="https://cs.wikipedia.org/wiki/Hello_world">na Wikipedii</a>
+
+## 20. hodina
+
+<a href="pokrocili-2-10-tiskarna3.jpg">
+    <img align="right" src="pokrocili-2-10-tiskarna3-small.jpg" style="height:85px">
+</a>
+<a href="pokrocili-2-10-tiskarna2.jpg">
+    <img align="right" src="pokrocili-2-10-tiskarna2-small.jpg" style="height:85px">
+</a>
+<a href="pokrocili-2-10-tiskarna.jpg">
+    <img align="right" src="pokrocili-2-10-tiskarna-small.jpg" style="height:85px">
+</a>
+<a href="pokrocili-2-10-microbit2.jpg">
+    <img align="right" src="pokrocili-2-10-microbit2-small.jpg" style="height:85px">
+</a>
+<a href="pokrocili-2-10-microbit.jpg">
+    <img align="right" src="pokrocili-2-10-microbit-small.jpg" style="height:85px">
+</a>
+
+* <a href="https://www.microbit.org">Micro:bit</a>
+  * Co to je Micro:bit (bbc, bit, microbit, co vše má destička na sobě, ...)
+  * Seznámení s programovacím interfacem <a href="https://makecode.microbit.org/">https://makecode.microbit.org/</a>
+  * Postup nahrání projektu na Micro:bit (**stáhnout**; **zrušit**; pravé tlačítko myši na **stáhnout znovu**; **uložit odkaz jako...**; vybrat disk **MICROBIT**; **uložit**)
+* Funkce laserové tiskárny
+  * Princip funkce laserové tiskárny (4xtoner, skleněný válec který laser lokálně nabije statickou elektřinou, prášek se uchytí a vytvoří zrcadlový obraz, obtiskne se na papír, papír se zažehlí při teplotě cca 200°C)
+  * Rozborka tiskárny HP Color LaserJet 5M (základní deska s procesorem a pamětí, rozšiřující deska JetDirect, display, pohyb v menu a spousta koleček)
 
 <img align="right" src="../../media/robots_bottom.jpg">
