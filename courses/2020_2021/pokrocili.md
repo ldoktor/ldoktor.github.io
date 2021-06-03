@@ -369,4 +369,25 @@ Kurz bude organizován a veden [Lukášem Doktorem](../lectors/ldoktor.md)
   * Princip funkce laserové tiskárny (4xtoner, skleněný válec který laser lokálně nabije statickou elektřinou, prášek se uchytí a vytvoří zrcadlový obraz, obtiskne se na papír, papír se zažehlí při teplotě cca 200°C)
   * Rozborka tiskárny HP Color LaserJet 5M (základní deska s procesorem a pamětí, rozšiřující deska JetDirect, display, pohyb v menu a spousta koleček)
 
+# 21. hodina
+
+<a href="pokrocili-2-11-microbit.jpg">
+    <img align="right" src="pokrocili-2-11-microbit-small.jpg" style="height:85px">
+</a>
+<a href="pokrocili-2-11-trachtenberg-scitani2.jpg">
+    <img align="right" src="pokrocili-2-11-trachtenberg-scitani2-small.jpg" style="height:85px">
+</a>
+<a href="pokrocili-2-11-trachtenberg-scitani1.jpg">
+    <img align="right" src="pokrocili-2-11-trachtenberg-scitani1-small.jpg" style="height:85px">
+</a>
+
+* <a href="https://trachtenbergspeedmath.com/">Trachtenberg - rychlé sčítání</a>
+  * Ukázka, k čemu jsou vhodné počítače - účetnictví
+  * Demonstrace volby algoritmu
+    * Prostý součet v podstatě nemožný, mnoho mezivýpočtů a v podstatě jistá chyba
+    * Trachtenberg - rychlé sčítání - rychlé a jednoduché - vždy počátáme jen do cca 20, složitost je lineární pro jakýkoliv počet i řád sčítaných čísel
+* <a href="https://www.microbit.org">Micro:bit</a>
+  * Čítač stisků tlačítka A
+  * Úprava na počet skoků
+
 <img align="right" src="../../media/robots_bottom.jpg">
