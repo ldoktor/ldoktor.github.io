@@ -390,4 +390,20 @@ Kurz bude organizován a veden [Lukášem Doktorem](../lectors/ldoktor.md)
   * Čítač stisků tlačítka A
   * Úprava na počet skoků
 
+# 22. hodina
+
+<a href="pokrocili-2-12-clovece-nezlob-se.jpg">
+    <img align="right" src="pokrocili-2-12-clovece-nezlob-se-small.jpg" style="height:85px">
+</a>
+
+* <a href="https://trachtenbergspeedmath.com/">Trachtenberg - rychlé sčítání</a>
+  * Ukázka lehké kontroly pomocí zástupných čísel
+    * lze použít pro jakýkoliv příklad (sčítání, odčítání, násobení, dělení, ...) ``12 * 14 = 168``
+    * každé číslo nahradím jeho jednomístným ciferným součtem  ``12=>3; 14=>5; 168=>15=>6``
+    * vypočítám příklad s těmito zástupnými čísli, obě strany musí vyjít stejně ``3 * 5 = 15=>6; 6 == 6``
+    * vše funguje proto, že ciferný součet udává zbytek po dělení 9. Neodhalí všechny chyby, ale je to lehká kontrola na odhalení základních chyb
+* <a href="https://www.microbit.org">Micro:bit</a>
+  * Tvorba kostky, abychom si mohli zahrát pexeso
+  * "Vylepšení" kostky, abychom mohli vyhrát pexeso (podvádění)
+
 <img align="right" src="../../media/robots_bottom.jpg">
