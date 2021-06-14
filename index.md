@@ -9,8 +9,11 @@ jako připomínka, či jiným lektorům jako zdroj informací.
 
 ## Aktuality:
 
-**Od 3.12.2020 probíhá do odvolání výuka v prostorách MammaCentra, U Stadionu
-2013, Havlíčkův Brod**
+**Na rok 2021-2022 je vypsán nový kurz, dle zájmu 1-3 skupiny. Termíny
+budou upřesněny v průběhu září, ale nejspíš opět čtvrtky po 14 hodině
+v prostorách ZŠ Nuselská. Hlásit se mohou děti z jakýhkoliv škol, 1. - 4.
+ročníky. V případě uzavírky bude výuka omezeně probíhat online
+či v MammaCentru. Více info v [letáku](courses/2021_2022/letacek.jpg)**
 
 ## Současné kurzy:
 
