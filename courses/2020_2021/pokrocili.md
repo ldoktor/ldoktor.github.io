@@ -406,4 +406,22 @@ Kurz bude organizován a veden [Lukášem Doktorem](../lectors/ldoktor.md)
   * Tvorba kostky, abychom si mohli zahrát pexeso
   * "Vylepšení" kostky, abychom mohli vyhrát pexeso (podvádění)
 
+# 23. hodina
+
+
+<a href="pokrocili-2-13-debugging-na-papire2.jpg">
+    <img align="right" src="pokrocili-2-13-debugging-na-papire2-small.jpg" style="height:85px">
+</a>
+<a href="pokrocili-2-13-debugging-na-papire.jpg">
+    <img align="right" src="pokrocili-2-13-debugging-na-papire-small.jpg" style="height:85px">
+</a>
+
+* <a href="https://trachtenbergspeedmath.com/">Trachtenberg - násobení čísel blížící se 10 a 100</a>
+  * Český návod [pdf](trachtenberg.pdf)/[ods](trachtenberg.ods)
+* [Domácí úkol](pokrocili-2-13-domaci-ukol.pdf)
+  * Opáčko Trachtenbergova rychlého sčítání
+  * Opáčko Trachtenbergovy metody násobení čísel okolo 10 a 100
+  * Jednoduché šifrování
+  * Programování Micro:bit na papíře
+
 <img align="right" src="../../media/robots_bottom.jpg">
