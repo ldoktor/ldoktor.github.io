@@ -440,7 +440,7 @@ Kurz bude organizován a veden [Lukášem Doktorem](../lectors/ldoktor.md)
 
 * <a href="https://www.openttd.org/">Open TTD</a>
   * Hra Open TTD je open-source re-implementací stařičké dosové hry "Transport Tycoon Deluxe" z roku 1994. Jedná se o simulaci ekonomiky z pozice dopravního magnáta. Je velmi komplexní, naučí děti základy ekonomiky, počítání a hlavně plánování. Signály pro řízení vlaků lze využít k výuce parallelizace a navíc lze do hry dodat vlastní doplňky, které si děti mohou samy vyvinout.
-  * Stažení je možné zdarma ze stránek <a href="https://www.openttd.org/downloads/openttd-releases/latest.html">OpenTTD</a>, případně na Steamu.
+  * Stažení je možné zdarma ze stránek <a href="https://www.openttd.org/downloads/openttd-releases/latest.html">OpenTTD</a>, případně na Steamu. A ke hře existuje pěkný popis <a href="https://wiki.openttd.org/cs/Manual/">formou wiki stránek částečně v češtině</a>
   * Po instalaci doporučuji v "možnosti hry"
     * Nastavit rozlišení obrazovky a zakliknout "na celou obrazovku"
     * Měnu CZK
@@ -451,7 +451,7 @@ Kurz bude organizován a veden [Lukášem Doktorem](../lectors/ldoktor.md)
     * "Výchozí typ návěstidla" - dokonalejší PBS
     * "Zavírat okno pravým tlačítkem myši" - ano
     * "Zakázat otáčení vlaků ve stanicích" - ne
-    * "Zakázat vlakům otáčení o 90 stupňů - ne
+    * "Zakázat vlakům otáčení o 90 stupňů" - ne
   * Dále pak v "Stahování součástí" dát hledat a stáhnout (cca 1GB):
     * "CZTR" (všechny položky - české vlaky/autobusy/prostředí)
     * "OpenSFX" (zvuky)
@@ -470,6 +470,7 @@ Kurz bude organizován a veden [Lukášem Doktorem](../lectors/ldoktor.md)
     * <a href="https://www.youtube.com/watch?v=U8JFf99d-b4">Úplné základy</a>
     * <a href="https://www.youtube.com/watch?v=07LFnqGqSXs&list=PLrd3MXH-BxoPAZNKKmFyFdv7ZCMcwxNLL">Pokročilejší témata</a>
     * <a href="https://www.youtube.com/watch?v=tQX5A0OzmX0&list=PLZ4ZL2Bf97rK6xbZOR85ux1IKn6imNm_S">Úžasná ukázka jak stavět realisticky železnici</a>
+* Na závěr ukázka Micro:bit autíčka z krabičky od bonboniéry (snad postavíme příští rok)
 
 
 <img align="right" src="../../media/robots_bottom.jpg">
