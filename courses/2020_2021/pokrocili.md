@@ -408,7 +408,6 @@ Kurz bude organizován a veden [Lukášem Doktorem](../lectors/ldoktor.md)
 
 # 23. hodina
 
-
 <a href="pokrocili-2-13-debugging-na-papire2.jpg">
     <img align="right" src="pokrocili-2-13-debugging-na-papire2-small.jpg" style="height:85px">
 </a>
@@ -423,5 +422,54 @@ Kurz bude organizován a veden [Lukášem Doktorem](../lectors/ldoktor.md)
   * Opáčko Trachtenbergovy metody násobení čísel okolo 10 a 100
   * Jednoduché šifrování
   * Programování Micro:bit na papíře
+
+# 24. a 25. (dvou) hodina
+
+<a href="pokrocili-2-14-microbi-car.jpg">
+    <img align="right" src="pokrocili-2-14-microbi-car-small.jpg" style="height:85px">
+</a>
+<a href="pokrocili-2-14-openttd1.jpg">
+    <img align="right" src="pokrocili-2-14-openttd1-small.jpg" style="height:85px">
+</a>
+<a href="pokrocili-2-14-openttd2.jpg">
+    <img align="right" src="pokrocili-2-14-openttd2-small.jpg" style="height:85px">
+</a>
+<a href="pokrocili-2-14-openttd-screenshot.jpg">
+    <img align="right" src="pokrocili-2-14-openttd-screenshot-small.jpg" style="height:85px">
+</a>
+
+* <a href="https://www.openttd.org/">Open TTD</a>
+  * Hra Open TTD je open-source re-implementací stařičké dosové hry "Transport Tycoon Deluxe" z roku 1994. Jedná se o simulaci ekonomiky z pozice dopravního magnáta. Je velmi komplexní, naučí děti základy ekonomiky, počítání a hlavně plánování. Signály pro řízení vlaků lze využít k výuce parallelizace a navíc lze do hry dodat vlastní doplňky, které si děti mohou samy vyvinout.
+  * Stažení je možné zdarma ze stránek <a href="https://www.openttd.org/downloads/openttd-releases/latest.html">OpenTTD</a>, případně na Steamu.
+  * Po instalaci doporučuji v "možnosti hry"
+    * Nastavit rozlišení obrazovky a zakliknout "na celou obrazovku"
+    * Měnu CZK
+    * Pro moderní jemné displaye doporučuji nastavit "Velikost rozhraní" na dvojnásobné (či čtyřnásobné)
+  * V "nastavení" pak:
+    * Překliknout "Kategorie - základní" na "Expertní" (čímž se zpřístupní další volby). Dále pak pomocí vyhledávání vyhledat následující volby (zpravidla stačí napsat několik prvních písmen)
+    * "Vyznačovat rezervovanou trať" - ano
+    * "Výchozí typ návěstidla" - dokonalejší PBS
+    * "Zavírat okno pravým tlačítkem myši" - ano
+    * "Zakázat otáčení vlaků ve stanicích" - ne
+    * "Zakázat vlakům otáčení o 90 stupňů - ne
+  * Dále pak v "Stahování součástí" dát hledat a stáhnout (cca 1GB):
+    * "CZTR" (všechny položky - české vlaky/autobusy/prostředí)
+    * "OpenSFX" (zvuky)
+    * "OpenMSX" (hudba)
+    * "Polish building set" - městské budovy podobné našim
+  * Tyto stažené grafiky je nutno aktivovat v "nastavení grafik". Stačí poklikat na všechny položky v dolním menu, čímž se přesunou nahoru a aktivují se.
+  * Pro výuku toku nákladů můžete použít [diagram toků nákladů](pokrocili-2-14-openttd-diagram-nakladu.pdf) a vyzkoušet si pospojovat veškerý průmysl na [naší výukové mapě](pokrocili-2-14-openttd-mapa.scn). Inspiraci do začátku můžete čerpat z následujícího [obrázku](pokrocili-2-14-openttd-screenshot.jpg). Pokud byste měli problém s penězi, můžete použít kódy pomocí ``ctrl+alt+c``.
+  * Pohyb po ploše je možný šipkamy či myší držením pravého tlačítka
+  * Kliknutím pravým tlačítkem kamkoliv na okno jej zavřete
+  * Pro dopravu je vždy potřeba postavit několik stanic/zastávek/letišť, koupit dopravní prostředek, nastavit trasu (šipka v pravo) a vypustit vozidlo (vlaječkou či tlačítko vespod dialogu vozidla)
+  * Letadla se kupují v hangáru na letišti (nutno klikat a hledat)
+  * Lodě se kupují v lodním depu a mola jsou univerzální
+  * Autobusy/náklaďáky se kupují v depu, které je nutno postavit. Dále se dělí zastávky na autobusové a nákladní.
+  * Vlakové stanice musí být delší, než nejdelší vlak (jinak bude nakládání trvat neúměrně dlouhou dobu). Doporučuji 5 či 6. Počet platform v ohromných městech 8, velkých městech 4, malých 2-3 a před a za vždy umístit "obousměrný dokonalejší PBS návěstidlo" ve směru ze stanice (vícenásobným klikáním se návěstidlo otočí). Pozor na příliš ostré zatáčky.
+  * Na youtube lze nalézt mnoho návodů, jak na hru.
+    * <a href="https://www.youtube.com/watch?v=U8JFf99d-b4">Úplné základy</a>
+    * <a href="https://www.youtube.com/watch?v=07LFnqGqSXs&list=PLrd3MXH-BxoPAZNKKmFyFdv7ZCMcwxNLL">Pokročilejší témata</a>
+    * <a href="https://www.youtube.com/watch?v=tQX5A0OzmX0&list=PLZ4ZL2Bf97rK6xbZOR85ux1IKn6imNm_S">Úžasná ukázka jak stavět realisticky železnici</a>
+
 
 <img align="right" src="../../media/robots_bottom.jpg">
