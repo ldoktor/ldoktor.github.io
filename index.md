@@ -31,13 +31,13 @@ jako připomínka, či jiným lektorům jako zdroj informací.
 
 ## Aktuality:
 
-**Příští rok (2023-2024) opět plánuji cca 3 skupiny kurzu programování
-na Nuselské. Termíny lekcí budou upřesněny koncem srpna/začátkem září,
-ale pokusím se udržet čtvrtky odpoledne v počítačové místnosti.**
+**Na školní rok 2023/2024 opět plánuji cca 3 skupiny kurzu programování
+na Nuselské. Termíny i místo zůstávají stejné, [přihlášky](2023_2024/prihlaska.pdf)
+můžete posílat emailem a pro děti mám letos zajímavé překvapení.**
 
 ## Současné kurzy:
 
-* ZŠ Nuselská 2023/2024 - dle zájmu 0 - 3 skupiny, nejspíš čtvrtek odpoledne
+* ZŠ Nuselská 2023/2024 - [začátečníci](2023_2024/zacatecnici), [pokročilí](2023_2024/pokrocili), [pokročilí2](2023_2024/pokrocili2) &nbsp;&nbsp; ([letáček](2023_2024/letacek.jpg), [přihláška](2023_2024/prihlaska.pdf))
 
 ## Archiv kurzů:
 
