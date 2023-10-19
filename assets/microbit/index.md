@@ -8,13 +8,7 @@ Pro nákup Micro:bitů, sad a základních rozšiřujících destiček mohu dopo
 Základní projekty
 -----------------
 
-* Zobrazení symbolů a znaků [kód](https://makecode.microbit.org/_7PVHdwVmtEEW)
-* Skokometr [kód](https://makecode.microbit.org/_cAha1i881ETL)
-* Morseovka [kód](https://makecode.microbit.org/_he62hT77k95d)
-* Mikuláš - roznos dárků dětem [kód](https://makecode.microbit.org/_cP6d8EPW5F6p)
-* Koleda [kód](https://makecode.microbit.org/_a3JUJCECsT4k)
-* Sfoukni svíčku [kód](https://makecode.microbit.org/_K4wa4D3izJPs)
-* Kostka [kód](https://makecode.microbit.org/_JLWFq1gA8MAg)
+Základní projekty i s popisem jsou k dispozici [zde](zakladni_projekty)
 
 Ovládání pinů
 -------------
