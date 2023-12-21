@@ -43,3 +43,8 @@ Groove shield
 
 * [Návod](https://github.com/SeeedDocument/Grove_kit_for_microbit/raw/master/res/Guide-Grove%20kit%20for%20microbit.pdf)
 * Nutno přidat rozšíření [github.com/seeed-studio/pxt-grove](github.com/seeed-studio/pxt-grove)
+
+Projekty
+--------
+
+* [Osvětlení kina/divadla](kino)
