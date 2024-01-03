@@ -177,6 +177,72 @@ while True:
         print(str(details))
 ```
 
+Pro simulaci denního světla lze využít LED pásek s pohyblivým světlem:
+
+```python
+from microbit import *
+import radio
+import neopixel
+
+
+# Nastav skupinu rádia
+radio.on()
+radio.config(group=0)
+
+# Zapni led pásek
+DELKA = 27  # Počet diod
+POZICE = 0  # Pozice kam svítit
+SIRKA = 3   # Kolik LED rozsvítit okolo středu
+BARVA = (255, 255, 255)   # Jakou barvou svítit
+PASEK = neopixel.NeoPixel(pin1, 11)
+# Otestuj funkci po spuštění
+PASEK.fill((0, 0, 255))
+PASEK.show()
+
+def zobraz_pasek():
+    # Překresli LED pásek
+    PASEK.clear()
+    PASEK[POZICE] = BARVA
+    for i in range(1, SIRKA):
+        PASEK[max(POZICE - i, 0)] = BARVA
+        PASEK[min(POZICE + i, DELKA-1)] = BARVA
+    PASEK.show()
+
+while True:
+    try:
+        prijato = radio.receive()
+        # Zkontroluj, že přišla nějaká zpráva
+        if not prijato:
+            continue
+        # Zprávu rozděl po mezerníkách
+        data = prijato.split(' ')
+        # Získej diodu a hodnotu
+        modul = data[0]
+        hodnota = int(data[1])
+        if modul == "pozice":
+            # Změň pozici a překresli pásek
+            # hodnota je 0 - 1023, přepočítej na 0 - (DELKA-1)
+            POZICE = hodnota * DELKA // 1024
+            zobraz_pasek()
+        elif modul == "barva":
+            # Změň barvu a překresli pásek
+            # hodnota ke 0 - 1023, přepočítej na 0 - 255
+            BARVA = (hodnota // 4, int(data[2]) // 4, int(data[3]) // 4)
+            zobraz_pasek()
+        elif modul == "pasek":
+            # Rozsviť všechny diody LED pásku
+            r = hodnota
+            g = int(data[2])
+            b = int(data[3])
+            # hodnota ke 0 - 1023, přepočítej na 0 - 255
+            PASEK.fill((r // 4, g // 4, b // 4))
+            PASEK.show()
+        else:
+            print("ERROR: %s" % prijato)
+    except Exception as details:
+        # Vytiskni chybu na seriovou konzoli
+        print(str(details))
+```
 
 Pro otestování komunikace jsme nejprve použili (trošku složitější)
 kód který rozsvěcí přímo diody na displeji microbitu:
