@@ -117,7 +117,7 @@ while True:
         # Zprávu rozděl po mezerníkách
         data = prijato.split(' ')
         # Získej diodu a hodnotu
-        led = data[0]
+        dioda = data[0]
         hodnota = int(data[1])
         # Rozsviť požadovanou diodu
         if dioda == "0":
