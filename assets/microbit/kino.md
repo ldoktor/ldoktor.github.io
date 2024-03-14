@@ -244,6 +244,89 @@ while True:
         print(str(details))
 ```
 
+Můžeme zobrazit i několik pohyblivých světel na jednom led pásku_
+
+```python
+from microbit import *
+import radio
+import neopixel
+
+
+# Nastav skupinu rádia
+radio.on()
+radio.config(group=4)
+
+class Svetlo:
+    def __init__(self, pozice=0, sirka=0, barva=(0, 0, 0)):
+        self.pozice = pozice
+        self.sirka = sirka
+        self.barva = barva
+
+    def __str__(self):
+        return " ".join(str(_) for _ in (self.pozice, self.sirka, self.barva))
+
+# Zapni led pásek
+DELKA = 300  # Počet diod
+SVETLA = [Svetlo() for _ in range(5)]
+PASEK = neopixel.NeoPixel(pin1, DELKA)
+# Otestuj funkci po spuštění
+PASEK.fill((0, 0, 255))
+#PASEK[0] = (254, 0, 0)
+PASEK.show()
+
+def zobraz_pasek():
+    # Překresli LED pásek
+    PASEK.clear()
+    for svetlo in SVETLA:
+        PASEK[svetlo.pozice] = svetlo.barva
+        i=0
+        for i in range(1, svetlo.sirka):
+            PASEK[max(svetlo.pozice - i, 0)] = svetlo.barva
+            PASEK[min(svetlo.pozice + i, DELKA-1)] = svetlo.barva
+    PASEK.show()
+
+while True:
+    try:
+        prijato = radio.receive()
+        # Zkontroluj, že přišla nějaká zpráva
+        if not prijato:
+            continue
+        # Zprávu rozděl po mezerníkách
+        data = prijato.split(' ')
+        # Získej diodu a hodnotu
+        modul = data[0]
+        index = int(data[1])
+        hodnota = int(data[2])
+        if modul == "pozice":
+            # Změň pozici a překresli pásek
+            # hodnota je 0 - 1023, přepočítej na 0 - (DELKA-1)
+            SVETLA[index].pozice = hodnota * DELKA // 1024
+            zobraz_pasek()
+        elif modul == "barva":
+            # Změň barvu a překresli pásek
+            # hodnota ke 0 - 1023, přepočítej na 0 - 255
+            SVETLA[index].barva = (hodnota // 4, int(data[3]) // 4, int(data[4]) // 4)
+            zobraz_pasek()
+        elif modul == "sirka":
+            # Změň šířku světla a překresli pásek
+            SVETLA[index].sirka = hodnota * DELKA // 512
+            zobraz_pasek()
+        elif modul == "pasek":
+            # Rozsviť všechny diody LED pásku
+            r = hodnota
+            g = int(data[3])
+            b = int(data[4])
+            # hodnota ke 0 - 1023, přepočítej na 0 - 255
+            PASEK.fill((r // 4, g // 4, b // 4))
+            #PASEK[0] = (r // 4, g // 4, b // 4)
+            PASEK.show()
+        else:
+            print("ERROR: %s" % prijato)
+    except Exception as details:
+        # Vytiskni chybu na seriovou konzoli
+        print(str(details))
+```
+
 Pro otestování komunikace jsme nejprve použili (trošku složitější)
 kód který rozsvěcí přímo diody na displeji microbitu:
 
