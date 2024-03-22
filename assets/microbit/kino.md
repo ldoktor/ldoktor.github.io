@@ -357,3 +357,74 @@ while True:
         # Vytiskni chybu na seriovou konzoli
         print(str(details))
 ```
+
+Natáčení stop-motion animace
+----------------------------
+
+Stop-motion animace je technika, kdy fotíme scénu po jednotlivých snímcích s drobnými změnami (pohyb ruky, posunutí motorky, ...) a následné spojení do jednoho videa. Existuje mnoho programů, které nám s tímto mohou pomoci, my jsme ale zvolili přímý postup bez využití specializovaných aplikací, abychom si ukázali, co vše je k tomuto potřeba.
+
+Fotky jsme snímali pomocí telefonu s fyzickým zoomem 2x (ukázali jsme si i 0.5x a 1x, rozdíl byl hlavně při okrajích kdy širokoúhlá čočka "vidí" širší záběr a výrazně se liší pozorovací úhly, 2x zoom má tyto rozdíly výrazně menší a lépe se hodí pro natáčení našich scén). V aplikaci (FreeDcam) jsme museli nastavit na pevno hodnoty ISO (citlivost snímače - souvisí se šumem a světlostí; 100), rychlost uzávěrky (jak dlouho se bude "vyvolávat" fotografie - světlost; 0.8s), vyvážení bíle (automatika by nám vyrušila barevné efekty; 5000/3800) a zaostření.
+
+Aby se nám mobilní telefon neposunoval, propojili jsme jej s počítačem a snímky pořizovali pomocí [adb](https://developer.android.com/tools/adb). Ten umožňuje simulovat doteky na obrazovce pomocí příkazu ``adb shell "input tap 10 20"`` (dotkni se prstem na poloze x=10 y=20).
+
+Po pořízení fotografie jsme fotky rovnou stahovali do počítače opět pomocí [adb](https://developer.android.com/tools/adb) příkazem ``adb pull -Z "$ADRESAR_FOTEK_TELEFON/$FOTO" "$ADRESAR_FOTEK_PC/"``. Abychom mohli výsledek zkontrolovat, zobrazili jsme si vždy nejnovější fotografii v klasickém prohlížeči obrázků. Abychom nemuseli překlikávat vždy na poslední fotku, nechali jsme počítač vždy zkopírovat poslední staženou fotku a přejmenovat ji na ``.posledni.jpg``, čímž prohlížeč fotek vždy po přepsání sám aktualizoval zobrazovanou ``.posledni.jpg`` fotografii.
+
+Abychom lépe viděli rozdíl mezi předchozím a současným snímkem, nechali jsme počítač vytvořit ještě jeden obrázek složený z poslední fotky a přes ní polo-průhledným obrázkem předposlední fotky. K tomu jsme využili programový balík ``ImageMagic``.
+
+Celý (BASH) skript vypadal následovně (spustitelné v operačním systému GNU/Linux, Windows používá obdobné BAT soubory):
+
+```bash
+#!/bin/bash
+
+## Definice proměnných použitých dále v programu
+ADRESAR_FOTEK_TELEFON="/storage/self/primary/DCIM/FreeDcam"
+ADRESAR_FOTEK_PC="./foto"
+POZICE_TLACITKA_VYFOT="2100 500"
+
+## Funkce použité dále v programu
+stahni_nove_fotky() {
+        # Detekuj nové fotky a stáhni je
+        for IMG in $(adb shell "cd $ADRESAR_FOTEK_TELEFON && ls -1"); do
+                [ -e "$ADRESAR_FOTEK_PC/$IMG" ] && continue
+                adb pull -Z "$ADRESAR_FOTEK_TELEFON/$IMG" "$ADRESAR_FOTEK_PC/"
+        done
+}
+
+vyfot_fotku() {
+        # Stiskni tlačítko vyfotit
+        adb shell "input tap $POZICE_TLACITKA_VYFOT"
+        # Odkomentuj následující řádek pro vyčkání na uložení fotky
+        sleep 1.5
+}
+
+aktualizuj_nahled() {
+        # Zkopíruj poslední obrázek do .posledni.jpg a vytvoř sloučený obrázek z posledních 2 obrázků
+        OBRAZKY=($(ls -t "$ADRESAR_FOTEK_PC" | head -n 2))
+        cp "$ADRESAR_FOTEK_PC/${OBRAZKY[0]}" "$ADRESAR_FOTEK_PC/.posledni.jpg"
+        convert "$ADRESAR_FOTEK_PC/${OBRAZKY[1]}" -quality 25 -alpha set -channel A -evaluate set 50% +channel "$ADRESAR_FOTEK_PC/.pruhledny.png"
+        composite "$ADRESAR_FOTEK_PC/.pruhledny.png" "$ADRESAR_FOTEK_PC/${OBRAZKY[0]}" -quality 25 -alpha on -compose over "$ADRESAR_FOTEK_PC/.nahled.png"
+}
+
+## Nyní již vlastní kód
+# Vytvoř výstupní složku
+mkdir -p "$ADRESAR_FOTEK_PC"
+
+# Do nekonecna porizuj fotky a stahuj je
+echo "Pozor, uložení fotky může chvíli trvat, takže poslední fotka nemusí být synchronizovaná!"
+while true; do
+        echo "ENTER pro vyfocení scény, CTRL+C pro ukončení"
+        read
+        vyfot_fotku
+        stahni_nove_fotky
+        aktualizuj_nahled
+done
+```
+
+
+Celý postup pak vypadal následovně:
+
+1. Skupina ovládající telefon (počítačem) stiskla ENTER, zkontrolovala výsledek a dala pokyn k nastavení další scény
+1. Skupina ovládající světla udělala požadovanou změnu (zpravidla velmi drobnou)
+1. Skupina ovládající "herce" udělala změnu na scéně (posunula postavičky, pohnula rukama/hlavou/nohou, ...)
+
+A tak pořád dokola, dokud nebylo dost obrazového materiálu ke zpracování.
