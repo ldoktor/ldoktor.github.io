@@ -31,16 +31,14 @@ jako připomínka, či jiným lektorům jako zdroj informací.
 
 ## Aktuality:
 
-**Na školní rok 2023/2024 opět plánuji cca 3 skupiny kurzu programování
-na Nuselské. Termíny i místo zůstávají stejné, [přihlášky](2023_2024/prihlaska.pdf)
-můžete posílat emailem a pro děti mám letos zajímavé překvapení.**
+**Na rok 2024/2025 mám předběžně slíbenou učebnu opět na čtvrtek odpoledne, detaily zveřejním až bude finální rozvrh cca začátkem září**
 
 ## Současné kurzy:
 
-* ZŠ Nuselská 2023/2024 - [začátečníci](2023_2024/zacatecnici), [pokročilí](2023_2024/pokrocili), [pokročilí2](2023_2024/pokrocili2) &nbsp;&nbsp; ([letáček](2023_2024/letacek.jpg), [přihláška](2023_2024/prihlaska.pdf))
 
 ## Archiv kurzů:
 
+* ZŠ Nuselská 2023/2024 - [začátečníci](2023_2024/zacatecnici), [pokročilí](2023_2024/pokrocili), [pokročilí2](2023_2024/pokrocili2) &nbsp;&nbsp; ([letáček](2023_2024/letacek.jpg), [přihláška](2023_2024/prihlaska.pdf))
 * ZŠ Nuselská 2022/2023 - [začátečníci](2022_2023/zacatecnici), [pokročilí](2022_2023/pokrocili), [pokročilí2](2022_2023/pokrocili2) &nbsp;&nbsp; ([letáček](2022_2023/letacek.jpg), [přihláška](2022_2023/prihlaska.pdf))
 * ZŠ Nuselská 2021/2022 - [začátečníci](2021_2022/zacatecnici), [pokročilí](2021_2022/pokrocili) &nbsp;&nbsp; ([letáček](2021_2022/letacek.jpg), [přihláška](2021_2022/prihlaska.pdf))
 * ZŠ Nuselská 2020/2021 - ~~[začátečníci](2020_2021/zacatecnici)~~, [pokročilí](2020_2021/pokrocili) &nbsp;&nbsp; ([letáček](2020_2021/letacek.jpg), [miniletáček](2020_2021/miniletacek.pdf), [přihláška](2020_2021/prihlaska.pdf))
