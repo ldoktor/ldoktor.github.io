@@ -31,10 +31,11 @@ jako připomínka, či jiným lektorům jako zdroj informací.
 
 ## Aktuality:
 
-**Na rok 2024/2025 mám předběžně slíbenou učebnu opět na čtvrtek odpoledne, detaily zveřejním až bude finální rozvrh cca začátkem září**
+**Můžete se začít přihlašovat na rok 2024/2025, dle zájmu se otevře 0 - 3 kurzy, opět čtvrtky na ZŠ Nuselská od 13:15, 14:15, 15:15. S výukou začínáme 19.9.2024, přihlášku můžete stáhnout [zde](2024_2025/prihlaska.pdf)**
 
 ## Současné kurzy:
 
+* ZŠ Nuselská 2023/2024 - začátečníci/pokročilí &nbsp;&nbsp; ([letáček](2024_2025/letacek.jpg), [přihláška](2024_2025/prihlaska.pdf))
 
 ## Archiv kurzů:
 
