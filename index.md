@@ -35,7 +35,7 @@ jako připomínka, či jiným lektorům jako zdroj informací.
 
 ## Současné kurzy:
 
-* ZŠ Nuselská 2023/2024 - začátečníci/pokročilí &nbsp;&nbsp; ([letáček](2024_2025/letacek.jpg), [přihláška](2024_2025/prihlaska.pdf))
+* ZŠ Nuselská 2024/2025 - [začátečníci](2024_2025/zacatecnici), [pokročilí](2024_2025/pokrocili), [pokročilí2](2024_2025/pokrocili2) &nbsp;&nbsp; ([letáček](2024_2025/letacek.jpg), [přihláška](2024_2025/prihlaska.pdf))
 
 ## Archiv kurzů:
 
