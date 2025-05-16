@@ -52,6 +52,7 @@ jako připomínka, či jiným lektorům jako zdroj informací.
 ## Další
 
 * [Informace pro mladší/starší sourozence](additional)
+* [Youtube kanál](https://www.youtube.com/@lukasdoktor)
 
 ## Kontakt
 
