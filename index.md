@@ -31,14 +31,14 @@ jako připomínka, či jiným lektorům jako zdroj informací.
 
 ## Aktuality:
 
-**Můžete se začít přihlašovat na rok 2024/2025, dle zájmu se otevře 0 - 3 kurzy, opět čtvrtky na ZŠ Nuselská od 13:15, 14:15, 15:15. S výukou začínáme 19.9.2024, přihlášku můžete stáhnout [zde](2024_2025/prihlaska.pdf)**
+**Počítám s 0 - 3 kurzy na rok 2025/2026 opět na ZŠ Nuselská, předběžně čtvrtky od 13:15, 14:15 a 15:15. Jakmile budu mít potvrzený pronájem cca začátkem září začnu přijímat přihlášky (předběžný zájem můžete vyjádřit emailem)**
 
 ## Současné kurzy:
 
-* ZŠ Nuselská 2024/2025 - [začátečníci](2024_2025/zacatecnici), [pokročilí](2024_2025/pokrocili), [pokročilí2](2024_2025/pokrocili2) &nbsp;&nbsp; ([letáček](2024_2025/letacek.jpg), [přihláška](2024_2025/prihlaska.pdf))
 
 ## Archiv kurzů:
 
+* ZŠ Nuselská 2024/2025 - [začátečníci](2024_2025/zacatecnici), [pokročilí](2024_2025/pokrocili), [pokročilí2](2024_2025/pokrocili2) &nbsp;&nbsp; ([letáček](2024_2025/letacek.jpg), [přihláška](2024_2025/prihlaska.pdf))
 * ZŠ Nuselská 2023/2024 - [začátečníci](2023_2024/zacatecnici), [pokročilí](2023_2024/pokrocili), [pokročilí2](2023_2024/pokrocili2) &nbsp;&nbsp; ([letáček](2023_2024/letacek.jpg), [přihláška](2023_2024/prihlaska.pdf))
 * ZŠ Nuselská 2022/2023 - [začátečníci](2022_2023/zacatecnici), [pokročilí](2022_2023/pokrocili), [pokročilí2](2022_2023/pokrocili2) &nbsp;&nbsp; ([letáček](2022_2023/letacek.jpg), [přihláška](2022_2023/prihlaska.pdf))
 * ZŠ Nuselská 2021/2022 - [začátečníci](2021_2022/zacatecnici), [pokročilí](2021_2022/pokrocili) &nbsp;&nbsp; ([letáček](2021_2022/letacek.jpg), [přihláška](2021_2022/prihlaska.pdf))
