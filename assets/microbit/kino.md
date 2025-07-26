@@ -16,7 +16,286 @@ Grafické rozhraní
 Serverová část je nad limit kurzu, jedná se o GUI (grafické uživatelské
 rozhraní) vytvořené v jazyce Python:
 
-* TODO
+```python
+import json
+from tkinter import simpledialog
+import sys
+
+import tkinter as tk
+
+
+class Zarizeni:
+
+    def __init__(self, kanal, nazev, volby="", hodnota=None):
+        self.kanal = kanal
+        self.nazev = nazev
+        self.hodnota = hodnota
+        self.indikator = None
+
+    def __str__(self):
+        return f"{self.kanal} {self.nazev} {self.text()}"
+
+    def draw(self, frame, row, col):
+        # Název zařízení
+        nazev_label = tk.Label(frame, text=f"{self.kanal}/{self.nazev}", background="gray80" if col % 2 else "white")
+        nazev_label.grid(row=row, column=col, pady=5, padx=5, sticky="w", columnspan=5)
+        row += 1
+
+        # Slidery pro složky RGB
+        row, max_col = self.draw_ovladace(frame, row, col)
+
+        # Kruhový widget pro zobrazení barvy
+        self.indikator = tk.Canvas(frame, width=30, height=30, bg=self.hex())
+        self.indikator.grid(row=row, column=col, pady=5, sticky="n", columnspan=5)
+        row += 1
+
+        # Tlačítko pro editaci zařízení
+        edit_button = tk.Button(frame, text="Editovat", command=lambda zarizeni=self, indikator=self.indikator: editovat_zarizeni(self, indikator))
+        edit_button.grid(row=row, column=col, pady=5, padx=5, sticky="w", columnspan=5)
+        row += 1
+
+        # Tlačítko pro smazání zařízení
+        delete_button = tk.Button(frame, text="Smazat", command=lambda zarizeni=self, indikator=self.indikator: smazat_zarizeni(self, indikator))
+        delete_button.grid(row=row, column=col, pady=5, padx=5, sticky="w", columnspan=5)
+        max_col = max(max_col, col + 5)
+        return row, max_col + 1
+
+    def draw_ovladace(self, frame, row, col):
+        return row, col
+
+    @staticmethod
+    def to_rgb(hodnota=None):
+        if hodnota is None:
+            hodnota = "#000000"
+        return [int(hodnota[1:3], 16), int(hodnota[3:5], 16), int(hodnota[5:7], 16)]
+
+    @staticmethod
+    def to_hex(hodnota=None):
+        return f"#{hodnota[0] // 4:02x}{hodnota[1] // 4:02x}{hodnota[2] // 4:02x}"
+
+    def hex(self):
+        return NotImplementedError
+
+    def text(self):
+        return NotImplementedError
+
+    # Funkce volaná při změně hodnoty
+    def zmen_hodnotu(self, hodnota):
+        if self.hodnota != hodnota:
+            self.hodnota = hodnota
+            if self.indikator:
+                self.indikator.configure(bg=self.hex())
+            sys.stdout.write(f"{self}\r\n")
+            sys.stdout.flush()
+
+
+class ZarizeniRGB(Zarizeni):
+
+    def __init__(self, kanal, nazev, volby="", hodnota=None):
+        if hodnota is None:
+            hodnota = [0, 0, 0]
+        else:
+            hodnota = self.to_rgb(hodnota)
+        Zarizeni.__init__(self, kanal, nazev, volby, hodnota)
+
+    def text(self):
+        return " ".join(str(_) for _ in self.hodnota)
+
+    def hex(self):
+        return(self.to_hex(self.hodnota))
+
+    def draw_ovladace(self, frame, row, col):
+        # Slidery pro složky RGB
+        def on_slider_click(slider):
+            def focus_slider(event):
+                slider.focus_set()
+            return focus_slider
+        for i in range(3):
+            posuvnik = tk.Scale(frame, from_=0, to=1023, orient=tk.VERTICAL, showvalue=0, length=160, width=10, takefocus=True, command=lambda value, col=i: self.zmen_hodnotu(value, col))
+            posuvnik.set(self.hodnota[i])
+            posuvnik.bind("<Button-1>", on_slider_click(posuvnik))
+            posuvnik.grid(row=row, column=col + i, pady=0, padx=0, sticky="ew")
+            col += 1
+        return row + 1, col
+
+    # Funkce volaná při změně hodnoty posuvníku
+    def zmen_hodnotu(self, hodnota, index=0):
+        _hodnota = self.hodnota[:]
+        _hodnota[index] = int(hodnota)
+        Zarizeni.zmen_hodnotu(self, _hodnota)
+
+
+class ZarizeniBarva(ZarizeniRGB):
+    def __init__(self, kanal, nazev, volby="", hodnota=None):
+        if hodnota is None:
+            hodnota = 0
+        else:
+            hodnota = float(hodnota)
+        Zarizeni.__init__(self, kanal, nazev, volby=volby, hodnota=hodnota)
+        self.zaklad_rgb = self.to_rgb(volby)
+
+    def text(self):
+        return str(self.hodnota)
+
+    def hex(self):
+        return self.to_hex([int(_ * self.hodnota // 255) for _ in self.zaklad_rgb])
+
+    def draw_ovladace(self, frame, row, col):
+        # Slidery pro složky RGB
+        posuvnik = tk.Scale(frame, from_=0, to=1023, orient=tk.VERTICAL, showvalue=0, length=160, width=10, takefocus=True, command=lambda value: self.zmen_hodnotu(value))
+        posuvnik.set(self.hodnota)
+        posuvnik.bind("<Button-1>", lambda event: posuvnik.focus_set())
+        posuvnik.grid(row=row, column=col, pady=0, padx=0, sticky="ew")
+        return row + 1, col
+
+    def zmen_hodnotu(self, hodnota):
+        Zarizeni.zmen_hodnotu(self, int(hodnota))
+
+
+# Vlastní dialog pro zadání zařízení a adresy
+class ZarizeniDialog(simpledialog.Dialog):
+
+    def __init__(self, parent, title):
+        self.kanal = None
+        self.nazev = None
+        super().__init__(parent, title=title)
+
+    def body(self, master):
+        tk.Label(master, text="Kanál:").grid(row=0, column=0, sticky="e")
+        tk.Label(master, text="Název zařízení:").grid(row=1, column=0, sticky="e")
+
+        self.kanal_entry = tk.Entry(master)
+        self.nazev_entry = tk.Entry(master)
+
+        self.kanal_entry.grid(row=0, column=1, sticky="w")
+        self.nazev_entry.grid(row=1, column=1, sticky="w")
+
+        return self.kanal_entry
+
+    def apply(self):
+        self.kanal = self.kanal_entry.get()
+        self.nazev = self.nazev_entry.get()
+
+
+# Funkce pro editaci zařízení
+def editovat_zarizeni(main_frame, zarizeni):
+    nova_hodnota = simpledialog.askinteger("Editovat zařízení", f"Zadejte novou hodnotu pro zařízení {zarizeni.kanal}/{zarizeni.nazev}:", minvalue=0, maxvalue=100)
+
+    if nova_hodnota is not None:
+        zarizeni.hodnota = nova_hodnota
+        aktualizovat_gui(main_frame)
+
+
+# Funkce pro smazání zařízení
+def smazat_zarizeni(main_frame, zarizeni):
+    zarizeni_list.remove(zarizeni)
+    aktualizovat_gui(main_frame)
+
+
+# Funkce pro aktualizaci GUI
+def aktualizovat_gui(main_frame):
+    # Seznam zařízení
+    row = 3
+    row_size = 0
+    col = 0
+    for zarizeni in zarizeni_list:
+        if zarizeni == "newline":
+            row += row_size + 1
+            row_size = 0
+            col = 0
+            continue
+        _row, _col = zarizeni.draw(main_frame, row, col)
+        row_size = max(row_size, _row)
+        col = _col + 1
+
+
+# Funkce pro uložení konfigurace do souboru
+def ulozit_konfiguraci():
+    with open("konfigurace.json", "w") as f:
+        data = [{"kanal": zarizeni.kanal, "nazev": zarizeni.nazev, "hodnota": zarizeni.hodnota} for zarizeni in zarizeni_list]
+        json.dump(data, f)
+    print("Konfigurace uložena do souboru 'konfigurace.json'")
+
+
+# Funkce pro načtení konfigurace ze souboru
+def nacist_konfiguraci(main_frame):
+    try:
+        with open("konfigurace.json", "r") as f:
+            data = json.load(f)
+            zarizeni_list.clear()
+            for item in data:
+                if item.get('typ') == 'newline':
+                    zarizeni_list.append("newline")
+                    continue
+                trida = {"RGB": ZarizeniRGB,
+                         "Barva": ZarizeniBarva}.get(item.get("typ"), ZarizeniRGB)
+                zarizeni_list.append(trida(item["kanal"], item["nazev"],
+                                           item.get("volby", None),
+                                           item.get("hodnota")))
+            print("Konfigurace načtena ze souboru 'konfigurace.json'")
+            aktualizovat_gui(main_frame)
+    except FileNotFoundError:
+        print("Defaultní konfigurace nenalezena.")
+
+
+# Hlavní okno
+root = tk.Tk()
+root.title("Hlavní okno")
+
+# Hlavní rámec
+main_frame = tk.Frame(root)
+main_frame.pack(padx=20, pady=20)
+
+# Kontrola existence defaultní konfigurace
+zarizeni_list = []
+aktualizovat_gui(main_frame)
+nacist_konfiguraci(main_frame)
+
+# Vazba Enteru na tlačítko OK ve funkci askinteger
+root.bind('<Return>', lambda event=None: root.event_generate('<Button-1>', when='tail'))
+
+# Spuštění hlavní smyčky
+root.mainloop()
+```
+
+a konfigurace:
+
+```json
+[
+ {"typ": "RGB", "kanal": 4, "nazev": "barva 0"},
+ {"typ": "RGB", "kanal": 4, "nazev": "barva 1"},
+ {"typ": "RGB", "kanal": 4, "nazev": "barva 2"},
+ {"typ": "RGB", "kanal": 4, "nazev": "barva 3"},
+ {"typ": "RGB", "kanal": 4, "nazev": "barva 4"},
+ {"typ": "RGB", "kanal": 4, "nazev": "barva 5"},
+ {"typ": "RGB", "kanal": 4, "nazev": "barva 6"},
+ {"typ": "RGB", "kanal": 4, "nazev": "barva 7"},
+ {"typ": "RGB", "kanal": 4, "nazev": "barva 8"},
+ {"typ": "RGB", "kanal": 4, "nazev": "barva 9"},
+ {"typ": "newline"},
+ {"typ": "Barva", "kanal": 4, "nazev": "pozice 0", "hodnota": "0", "volby": "#FFFFFF"},
+ {"typ": "Barva", "kanal": 4, "nazev": "pozice 1", "hodnota": "0", "volby": "#FFFFFF"},
+ {"typ": "Barva", "kanal": 4, "nazev": "pozice 2", "hodnota": "0", "volby": "#FFFFFF"},
+ {"typ": "Barva", "kanal": 4, "nazev": "pozice 3", "hodnota": "0", "volby": "#FFFFFF"},
+ {"typ": "Barva", "kanal": 4, "nazev": "pozice 4", "hodnota": "0", "volby": "#FFFFFF"},
+ {"typ": "Barva", "kanal": 4, "nazev": "pozice 5", "hodnota": "0", "volby": "#FFFFFF"},
+ {"typ": "Barva", "kanal": 4, "nazev": "pozice 6", "hodnota": "0", "volby": "#FFFFFF"},
+ {"typ": "Barva", "kanal": 4, "nazev": "pozice 7", "hodnota": "0", "volby": "#FFFFFF"},
+ {"typ": "Barva", "kanal": 4, "nazev": "pozice 8", "hodnota": "0", "volby": "#FFFFFF"},
+ {"typ": "Barva", "kanal": 4, "nazev": "pozice 9", "hodnota": "0", "volby": "#FFFFFF"},
+ {"typ": "newline"},
+ {"typ": "Barva", "kanal": 4, "nazev": "sirka 0", "volby": "#FFFFFF"},
+ {"typ": "Barva", "kanal": 4, "nazev": "sirka 1", "volby": "#FFFFFF"},
+ {"typ": "Barva", "kanal": 4, "nazev": "sirka 2", "volby": "#FFFFFF"},
+ {"typ": "Barva", "kanal": 4, "nazev": "sirka 3", "volby": "#FFFFFF"},
+ {"typ": "Barva", "kanal": 4, "nazev": "sirka 4", "volby": "#FFFFFF"},
+ {"typ": "Barva", "kanal": 4, "nazev": "sirka 5", "volby": "#FFFFFF"},
+ {"typ": "Barva", "kanal": 4, "nazev": "sirka 6", "volby": "#FFFFFF"},
+ {"typ": "Barva", "kanal": 4, "nazev": "sirka 7", "volby": "#FFFFFF"},
+ {"typ": "Barva", "kanal": 4, "nazev": "sirka 8", "volby": "#FFFFFF"},
+ {"typ": "Barva", "kanal": 4, "nazev": "sirka 9", "volby": "#FFFFFF"}
+]
+```
 
 a její funkcí je umožnit ovládání jednotlivých zařízení připojených k
 několika microbitům. Tato část posílá na sériovou konzoli zprávy ve
