@@ -9,6 +9,7 @@ microbitům, které je mohou rozsvěcet a zhasínat. Celé to řídí hlavní
 "serverový" microbit, který je instruovaný z počítače a posílá zprávy
 našim "klientským" microbitům.
 
+[Video-report z přípravy + výsledná videa](https://www.youtube.com/watch?v=Wm18k5CurfM)
 
 Grafické rozhraní
 -----------------
