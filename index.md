@@ -31,10 +31,11 @@ jako připomínka, či jiným lektorům jako zdroj informací.
 
 ## Aktuality:
 
-**Počítám s 0 - 3 kurzy na rok 2025/2026 opět na ZŠ Nuselská, předběžně čtvrtky od 13:15, 14:15 a 15:15. Jakmile budu mít potvrzený pronájem cca začátkem září začnu přijímat přihlášky (předběžný zájem můžete vyjádřit emailem)**
+**Začíná zápis na rok 2025/2026 opět na ZŠ Nuselská, dle zájmu 0 - 3 skupiny každý čtvrtek od 13:15, 14:15 a 15:15. Vyplněné [přihlášky](2025_2026/prihlaska.pdf) posílejte prosím na email viz. kontakty.**
 
 ## Současné kurzy:
 
+* ZŠ Nuselská 2025/2026 - [začátečníci](2025_2026/zacatecnici), [pokročilí](2025_2026/pokrocili), [pokročilí2](2025_2026/pokrocili2) &nbsp;&nbsp; ([letáček](2025_2026/letacek.jpg), [přihláška](2025_2026/prihlaska.pdf))
 
 ## Archiv kurzů:
 
@@ -51,8 +52,11 @@ jako připomínka, či jiným lektorům jako zdroj informací.
 
 ## Další
 
+<a href="https://www.youtube.com/watch?v=Wm18k5CurfM&list=PLSbQCXEMgiaQUurFn0K1zIZ7cQEfAVR9j">
+    <img align="right" src="2024_2025/video-0-0-toustik-small.jpg" style="height:85px">
+</a>
 * [Informace pro mladší/starší sourozence](additional)
-* [Youtube kanál](https://www.youtube.com/@lukasdoktor)
+* [Youtube kanál](https://www.youtube.com/watch?v=Wm18k5CurfM&list=PLSbQCXEMgiaQUurFn0K1zIZ7cQEfAVR9j)
 
 ## Kontakt
 
