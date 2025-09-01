@@ -3,8 +3,8 @@
 <a href="2021_2022/zacatecnici-1-15-cubetto.jpg">
     <img align="right" src="2021_2022/zacatecnici-1-15-cubetto-small.jpg" style="height:85px">
 </a>
-<a href="2021_2022/zacatecnici-2-01-sipkovana.jpg">
-    <img align="right" src="2021_2022/zacatecnici-2-01-sipkovana-small.jpg" style="height:85px">
+<a href="2023_2024/zacatecnici-2-02-scratch.jpg">
+    <img align="right" src="2023_2024/zacatecnici-2-02-scratch-small.jpg" style="height:85px">
 </a>
 <a href="2023_2024/pokrocili-2-04-kino.jpg">
     <img align="right" src="2023_2024/pokrocili-2-04-kino-small.jpg" style="height:85px">
