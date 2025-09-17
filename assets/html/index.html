@@ -1,0 +1,938 @@
+<!doctype html>
+<html lang="cs">
+<!-- Hlavička naší stránky -->
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ukázková stránka – HTML příklady</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kablammo&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Kablammo&family=Monsieur+La+Doulaise&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial, sans-serif; color: #222; background: #f7f7fb; }
+    header { position: sticky; top: 0; z-index: 1000; background: #ffffffcc; backdrop-filter: blur(6px); border-bottom: 1px solid #eee; }
+    .topbar { display: flex; align-items: center; justify-content: space-between; height: 56px; }
+    .brand { font-weight: 700; letter-spacing: 0.4px; }
+    nav ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 16px; }
+    nav a { text-decoration: none; color: #222; padding: 8px 10px; border-radius: 10px; }
+    nav a:hover { background: #f0f0f4; }
+    .has-sub { position: relative; }
+    .submenu { position: absolute; left: 0; top: calc(100% + 8px); min-width: 180px; background: #fff; border: 1px solid #eee; border-radius: 12px; padding: 8px; display: none; box-shadow: 0 8px 20px rgba(0,0,0,0.06); }
+    .submenu a { display: block; padding: 8px 10px; }
+    .submenu a:hover { background: #f6f6fb; }
+    .has-sub:hover .submenu { display: block; }
+    .layout { display: grid; grid-template-columns: 240px 1fr 240px; gap: 20px; padding: 20px 16px 60px; }
+    main { display: grid; gap: 20px; }
+    .card { border-radius: 18px; padding: 20px; background: #fff; box-shadow: 0 8px 20px rgba(0,0,0,0.06); }
+    .card h2 { margin-top: 0; font-size: 1.35rem; }
+    .muted { color: #555; }
+    .bg-blue { background: #f0f6ff; }
+    .bg-green { background: #eefaf2; }
+    .bg-yellow { background: #fff8e6; }
+    .bg-pink { background: #fff0f6; }
+    pre { background:#eee; padding:10px; border-radius:8px; overflow:auto; }
+    code { font-family: monospace; }
+    @media (max-width: 980px) { .layout { grid-template-columns: 1fr; } .side { position: static; } .side.right { order: 3; } .side.left { order: 1; } main { order: 2; } }
+  </style>
+</head>
+
+<!-- Tělo stránky -->
+<body>
+  <!-- Lištička nahoře -->
+  <header>
+    <div class="container topbar">
+      <div class="brand">Ukázková HTML stránka</div>
+      <nav>
+        <ul>
+          <li class="has-sub">
+            <a href="#kapitoly">Základní</a>
+            <div class="submenu">
+              <a href="#kap1">Nadpisy</a>
+              <a href="#kap2">Druhy sazby</a>
+              <a href="#kap3">Odrážky</a>
+              <a href="#kap4">Fonty</a>
+              <a href="#kap5">Barvy textu</a>
+              <a href="#kap6">Barvy pozadí</a>
+              <a href="#kap7">Smajlíci</a>
+              <a href="#kap8">Zarovnání obrázků</a>
+            </div>
+          </li>
+          <li class="has-sub">
+            <a href="#kapitoly">Pokročilé</a>
+            <div class="submenu">
+              <a href="#kap9">Formuláře</a>
+              <a href="#kap10">Tabulky</a>
+              <a href="#kap11">Skrývání</a>
+              <a href="#kap12">Efekty s myší</a>
+              <a href="#kap13">Vložení jiné stránky</a>
+            </div>
+          </li>
+          <li class="has-sub">
+            <a href="#kapitoly">Bezpečnost</a>
+            <div class="submenu">
+              <a href="#kap16">Profilování prohlížeče</a>
+              <a href="#kap17">Ctrl+C / Ctrl+V a bezpečnost</a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Rozdělení na levou, střed a pravou stranu -->
+  <div class="container layout">
+    <!-- Levá strana s obrázky -->
+    <aside class="side left">
+      <img id="scroll-img" src="" alt="">
+    </aside>
+
+    <style>
+        aside.side.left {
+          position: sticky;  /* stays visible */
+          top: 0;
+          width: 250px;
+          height: 100vh;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          overflow: hidden;
+        }
+#scroll-img {
+          width: 100%;
+          opacity: 0;
+          transform: translateY(100px);
+          transition: opacity 0.3s linear, transform 0.3s linear;
+        }
+    </style>
+
+    <script>
+      const getparams = new URLSearchParams(window.location.search);
+      let imageList;
+
+      if ((getparams.has("libi")) && (getparams.get("libi") === "Nelíbí se")) {
+          imageList = [
+              "media/unicorn1.jpg",
+              "media/unicorn2.jpg",
+              "media/unicorn3.jpg",
+              "media/unicorn4.jpg",
+              "media/unicorn5.jpg",
+              "media/unicorn6.jpg",
+              "media/unicorn7.jpg",
+              "media/unicorn8.jpg",
+              "media/unicorn9.jpg",
+              "media/unicorn10.jpg",
+              "media/unicorn11.jpg",
+              "media/unicorn12.jpg",
+              "media/unicorn13.jpg",
+              "media/unicorn14.jpg",
+              "media/unicorn16.jpg",
+              "media/unicorn17.jpg",
+              "media/unicorn18.jpg",
+              "media/unicorn19.jpg",
+              "media/unicorn20.jpg",
+              "media/unicorn21.jpg",
+          ];
+      } else if ((getparams.has("libi")) && (getparams.get("libi") === "hacker")) {
+          imageList = [
+            "media/hacker1.jpg",
+            "media/hacker2.jpg",
+            "media/hacker3.jpg",
+            "media/hacker4.jpg",
+            "media/hacker5.jpg",
+            "media/hacker6.jpg",
+            "media/hacker7.jpg",
+            "media/hacker8.jpg",
+            "media/hacker9.jpg",
+            "media/hacker10.jpg",
+            "media/hacker11.jpg",
+            "media/hacker12.jpg",
+            "media/hacker13.jpg",
+            "media/hacker14.jpg",
+            "media/hacker15.jpg",
+            "media/hacker16.jpg",
+            "media/hacker17.jpg",
+            "media/hacker18.jpg",
+            "media/hacker19.jpg",
+            "media/hacker20.jpg",
+            "media/hacker21.jpg",
+            "media/hacker22.jpg",
+          ]
+      } else {
+          imageList = [
+            "media/00001-4280014589.jpg",
+            "media/00005-4280014591.jpg",
+            "media/00010-4280014593.jpg",
+            "media/00012-4280014594.jpg",
+            "media/00017-4280014597.jpg",
+            "media/00018-4280014597.jpg",
+            "media/00033-4280014605.jpg",
+            "media/00041-4280014609.jpg",
+            "media/00043-4280014610.jpg",
+            "media/00046-4280014611.jpg",
+            "media/00067-4280014622.jpg",
+            "media/00196-4280014575.jpg",
+            "media/00197-4280014575.jpg",
+            "media/00199-4280014576.jpg",
+            "media/00200-4280014577.jpg",
+            "media/00201-4280014577.jpg",
+            "media/00203-4280014578.jpg",
+            "media/00205-4280014579.jpg",
+            "media/00210-4280014582.jpg",
+            "media/00212-4280014583.jpg",
+            "media/00215-4280014584.jpg",
+            "media/00218-4280014586.jpg",
+          ];
+      }
+
+      const img = document.getElementById("scroll-img");
+
+      window.addEventListener("scroll", () => {
+        const maxScroll = document.body.scrollHeight - window.innerHeight;
+        const scrollTop = window.scrollY;
+        const progress = scrollTop / maxScroll;
+
+        const index = Math.floor(progress * imageList.length);
+        img.src = imageList[index] || imageList[imageList.length - 1];
+
+        img.style.opacity = 1;
+        img.style.transform = `translateY(${100 - progress * 100}px)`;
+      });
+    </script>
+
+    <!-- Střed s kapitolami -->
+    <main id="kapitoly">
+      <section id="kap1" class="card bg-blue">
+        <h2>Nadpisy, podnadpisy a odstavce</h2>
+        <h1>H1 – hlavní nadpis</h1>
+        <h2>H2 – podnadpis</h2>
+        <p>Odstavec textu, který slouží jako ukázka.</p>
+        <pre><code>&lt;h1&gt;H1&lt;/h1&gt;
+&lt;h2&gt;H2&lt;/h2&gt;
+&lt;p&gt;Odstavec...&lt;/p&gt;</code></pre>
+      </section>
+
+      <section id="kap2" class="card bg-green">
+        <h2>Druhy sazby</h2>
+        <p><b>Tučný</b>, <i>kurzíva</i>, <u>podtržený</u>, <mark>zvýrazněný</mark>.</p>
+        <pre><code>&lt;b&gt;...&lt;/b&gt;
+&lt;i&gt;...&lt;/i&gt;
+&lt;u&gt;...&lt;/u&gt;
+&lt;mark&gt;...&lt;/mark&gt;</code></pre>
+      </section>
+
+      <section id="kap3" class="card bg-yellow">
+        <h2>Odrážky a seznamy</h2>
+        <ul>
+          <li>Položka A</li>
+          <li>Položka B</li>
+        </ul>
+        <ol>
+          <li>První</li>
+          <li>Druhá</li>
+        </ol>
+        <pre><code>&lt;ul&gt;
+  &lt;li&gt;...&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+  &lt;li&gt;...&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+      </section>
+
+      <section id="kap4" class="card bg-pink">
+        <h2>Fonty</h2>
+        <p style="text-align: left; font-family: 'Courier New'; font-size: x-large">Courier New zarovnaný doleva</p>
+        <p style="text-align: right; font-family: 'Monsieur La Doulaise', cursive; font-size: 30px;">Psací font zarovnaný doprava</p>
+        <p style="text-align: center; font-family: 'Kablammo', cursive; font-size: 1cm">Bláznivý font zarovnaný na střed</p>
+        <pre><code>style="text-align: center; font-family: 'Courier New', cursive; font-size: 30px;"</code></pre>
+
+        <a href="https://fonts.google.com/">Fonty můžeme najít zde</a>
+      </section>
+
+      <section id="kap5" class="card bg-blue">
+        <h2>Barvy textu</h2>
+        <p style="color:red;">Červená</p>
+        <p style="color:blue;">Modrá</p>
+        <p style="background: linear-gradient(to right, red, orange, yellow, green, blue, violet); -webkit-background-clip: text; color: transparent;">Duhový text ......................................................................................</p>
+        <pre><code>&lt;p style="color:blue;"&gt;Modrá;&gt;modrý text&lt;/p&gt;
+&lt;p style="background: linear-gradient(to right, green, yellow);
+-webkit-background-clip: text; color: transparent;"&gt;Text&lt;/p&gt;</code></pre>
+      </section>
+
+      <section id="kap6" class="card bg-green">
+        <style>
+            @keyframes gradientMove {
+            0% {background-position:0% 50%;}
+            50% {background-position:100% 50%;}
+            100% {background-position:0% 50%;}
+            }
+            .animated-bg {
+            background: linear-gradient(270deg, lime, gold, red, blue);
+            background-size: 600% 600%;
+            animation: gradientMove 12s ease infinite;
+            padding:20px; border-radius:10px; color:#222;
+            }
+        </style>
+        <h2>Barvy pozadí a efekty</h2>
+        <div style="background: pink; padding:10px;">Růžový</div>
+        <div style="background: lightblue; padding:10px;">Modrý</div>
+        <div style="background: linear-gradient(to right, lime, gold); padding:10px;">Přechod</div>
+        <div class="animated-bg">Animovaný přechod</div>
+        <pre><code>&lt;p style="background: green;"&gt;Zelené pozadí&lt;/p&gt;
+&lt;p style="background: linear-gradient(to right, lime, gold);"&gt;Přechod&lt;/p&gt;</code></pre>
+      </section>
+
+      <section id="kap7" class="card bg-yellow">
+        <h2>Smajlíci</h2>
+        <p>😊 😀 😁 😂 🤣 😍 😎</p>
+        <p>👍👍🏻👍🏼👍🏽👍🏾👍🏿</p>
+        <p>😇👼🌈🦄 – nebesa</p>
+        <pre style="font-size: 3rem; line-height: 1.2;margin: 0;white-space: pre-wrap;">🧙🏻‍♂️🧝🏿‍♀️🧱⬛⬛🟨🟨⬛
+🟩🟩⬜⬜🚪🟨🐉🌀
+🌳🟩🧱⬜⬛📦🟨⬛
+🟩🪟🧟‍♂️⬜⬛⬛⬛⬛
+🧱🧱🗝️🔥⬛⬛⬛⬛</pre>
+      </section>
+
+      <section id="kap8" class="card bg-pink">
+        <h2>Zarovnání obrázků</h2>
+        <div style="display: flex; flex-direction: column; align-items: flex-start;"><p><img src="media/maly.jpg" style="float:left; margin:10px;">Obrázek vlevo.</p></div>
+        <div style="display: flex; flex-direction: column; align-items: flex-end;"><p><img src="media/maly.jpg" style="float:right; margin:10px;">Obrázek vpravo.</p></div>
+        <div style="display: flex; flex-direction: column; align-items: center;"><p style="text-align:center;"><img src="media/maly.jpg">Obrázek uprostřed.</p></div>
+        <pre><code>&lt;img src="foo.jpg" style="float:left;"&gt;</code></pre>
+      </section>
+
+      <section id="kap9" class="card bg-blue">
+        <h2>Formuláře</h2>
+        <form id="mojeForm">
+            <input type="text" name="jmeno" placeholder="Jméno" /><br><br>
+
+            <select name="vek">
+              <option value="">-- vyber věk --</option>
+              <option>&lt;=5</option>
+              <option>6</option>
+              <option>7</option>
+              <option>8</option>
+              <option>9</option>
+              <option>10</option>
+              <option>11</option>
+              <option>12</option>
+              <option>13</option>
+              <option>14</option>
+              <option>&gt;14</option>
+            </select><br><br>
+
+            <label>Jak se vám líbí HTML stránka?</label><br>
+            <input type="radio" name="libi" value="Velmi" id="velmi">
+            <label for="velmi">👍</label><br>
+            <input type="radio" name="libi" value="Středně" id="stredne">
+            <label for="stredne">😐</label><br>
+            <input type="radio" name="libi" value="Nelíbí se" id="nelibi">
+            <label for="nelibi">👎</label><br><br>
+
+            <button type="submit">Odeslat 🚀</button>
+        </form>
+
+        <div id="vysledek"></div>
+
+        <script>
+            const vysledek = document.getElementById("vysledek");
+            const params = new URLSearchParams(window.location.search);
+
+            if (params.has("jmeno") || params.has("vek") || params.has("libi")) {
+              const jmeno = params.get("jmeno") || "Neznámý hrdina 🦸";
+              const vek = params.get("vek") || "tajemný věk 🔮";
+              const libi = params.get("libi");
+
+              let zprava = `${jmeno}, pěkné jméno! 👋<br>`;
+              zprava += `Vidím, že ti je ${vek} let. 🎂<br>`;
+
+              if (libi === "Velmi") {
+                zprava += "To mě těší 😍🌟<br>";
+              } else if (libi === "Středně") {
+                zprava += "Chápu, jde to, ale dře to ...<br>";
+              } else if (libi === "Nelíbí se") {
+                zprava += "Ach ne 😱! Příště přidáme jednorožce 🦄✨ a 🌈<br>";
+              } else if (libi === null) {
+                zprava += "Ještě jsi neřekl, jak se ti líbí stránka 🤔<br>";
+              } else {
+                zprava += `Pán je hacker 💻🕵️‍♂️📡🔥🔐💀 a odovídá si vlasní hodnoty ${libi}`;
+              }
+
+              vysledek.innerHTML = zprava;
+            };
+        </script>
+        <pre><code>&lt;form method="GET"&gt;...&lt;/form&gt;</code></pre>
+      </section>
+
+      <section id="kap10" class="card bg-green">
+        <h2>Tabulky</h2>
+        <table style="border-collapse:collapse; width:100%;">
+          <tr style="background:#ddd;"><th>Hra</th><th>Odehráno hodin</th><th>Hodnocení</th></tr>
+          <tr style="background:#f9f9f9;"><td>Euro Truck Simulator 2</td><td>230h</td><td>10</td></tr>
+          <tr style="background:#fff;"><td>The Sims 4</td><td>167h</td><td>7</td></tr>
+          <tr style="background:#f9f9f9;"><td>DiRT Rally 2.0</td><td>91h</td><td>10</td></tr>
+          <tr style="background:#fff;"><td>BeamNG + Automation</td><td>79h</td><td>10</td></tr>
+          <tr style="background:#f9f9f9;"><td>Two Point Hospital</td><td>70h</td><td>8</td></tr>
+          <tr style="background:#fff;"><td>Spintires</td><td>75h</td><td>9</td></tr>
+          <tr style="background:#f9f9f9;"><td>Spore</td><td>42h</td><td>8</td></tr>
+          <tr style="background:#fff;"><td>Poly Bridge</td><td>24h</td><td>8</td></tr>
+        </table>
+        <pre><code>
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Předmět&lt;/th&gt;
+      &lt;th&gt;Známka&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Matematika&lt;/td&gt;
+      &lt;td&gt;5&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Čeština&lt;/td&gt;
+      &lt;td&gt;5&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Dějepic&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+      </section>
+
+      <section id="kap11" class="card bg-yellow">
+        <h2>Skrývání elementů</h2>
+        <p id="textik">Tento text lze skrýt a znovu zobrazit.</p>
+        <img id="obrazek" src="media/maly.jpg" alt="Obrázek" />
+        <button onclick="toggleEl('textik')">Text on/off</button>
+        <button onclick="toggleEl('obrazek')">Obrázek on/off</button>
+        <script>
+          function toggleEl(id){
+            let el=document.getElementById(id);
+            el.style.display = (el.style.display==='none')?'block':'none';
+          }
+        </script>
+        <pre><code>&lt;p style="display: none"&gt;Nejsem tu&lt;/p&gt;</code></pre>
+      </section>
+
+      <section id="kap12" class="card bg-pink">
+        <h2>Efekty s myší</h2>
+
+        <p id="hoverText" style="padding: 4px 8px; border-radius: 5px; transition: all 0.5s; display: inline-block;">Co umím?</p>
+        <style>
+          #hoverText:hover { color: blue; background: yellow; cursor: pointer; transform: rotate(5deg); scale(1.3);}
+        </style>
+
+        <p onclick="this.style.color=(this.style.color==='red'?'green':'red')">Klikni pro přepínání barev</p>
+        <p onmouseover="showTip(this)" onmouseout="hideTip()">Najetí zobrazí tip</p>
+        <div id="tip" style="display:none; position:absolute; background:#333; color:#fff; padding:5px; border-radius:5px;">Což takhle zkusit kliknout na 'x'?</div>
+        <span>tento te</span><span onclick="window.location='https://ldoktor.github.io'">x</span><span>t obsahuje tajný odkaz, najdeš ho?</span>
+        <script>
+          function showTip(el){ let t=document.getElementById('tip'); t.style.display='block'; t.style.top=el.offsetTop+20+'px'; t.style.left=el.offsetLeft+'px'; }
+          function hideTip(){ document.getElementById('tip').style.display='none'; }
+        </script>
+        <pre><code>#hoverText:hover { color: blue; transform: rotate(5deg); scale(1.3); }
+onclick → změna barvy
+onmouseover → zobraz tip</code></pre>
+      </section>
+
+      <section id="kap13" class="card bg-blue">
+        <h2>Vložení jiné stránky</h2>
+        <div style="width:100%; overflow:hidden; position:relative;">
+          <iframe src="deskovka.html" style="width:1000px;height:1000px;transform: scale(0.8);transform-origin: 0 0;border:none;position:absolute;top:0;left:0;">
+            </iframe>
+            <!-- container height compensates scaling -->
+            <div style="padding-top:800px;"></div>
+        </div>
+        <pre><code>&lt;iframe src="foo.html"&gt;&lt;/iframe&gt;</code></pre>
+      </section>
+
+      <section id="kap14" class="card bg-green">
+        <h2>Kurzor</h2>
+
+        <div style="cursor: default">Obyčejný ukazatel</div>
+        <div style="cursor: pointer">Prstík</div>
+        <div style="cursor: crosshair">Zaměřovač</div>
+        <div style="cursor: wait">Přemýšlím</div>
+        <div style="cursor: grab">Chytni mě</div>
+        <div class="crazy">Náhodný kurzor</div>
+        <script>
+          // Crazy random cursor (CSS keywords)
+          const crazyBox = document.querySelector("#kap14 .crazy");
+          const cursors = ["alias","all-scroll","cell","context-menu","copy","help","move","not-allowed","progress","zoom-in","zoom-out"];
+          crazyBox.addEventListener("mousemove", () => {
+            const random = cursors[Math.floor(Math.random() * cursors.length)];
+            crazyBox.style.cursor = random;
+          });
+        </script>
+
+        <div class="emoji">Umím i emotikony</div>
+        <style>
+        #kap14 .emoji {
+          cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" height="40" width="40"><text y="50%" x="50%" text-anchor="middle" dominant-baseline="central" font-size="28">🎉</text></svg>') 16 16, auto;
+        }
+        </style>
+
+        <div class="skin">Nebo se průběžně měnit</div>
+        <script>
+        // Skin-tone cycling hand 👋🏻 → 👋🏿
+        const skinBox = document.querySelector("#kap14 .skin");
+        const hands = ["👋🏻","👋🏼","👋🏽","👋🏾","👋🏿"];
+        let skinIndex = 0, skinDir = 1;
+        setInterval(() => {
+          // bounce between light and dark
+          skinIndex += skinDir;
+          if (skinIndex >= hands.length - 1 || skinIndex <= 0) skinDir *= -1;
+          const hand = hands[skinIndex];
+          const svg = `<svg xmlns="http://www.w3.org/2000/svg" height="40" width="40">
+            <text y="50%" x="50%" text-anchor="middle" dominant-baseline="central" font-size="28">${hand}</text>
+          </svg>`;
+          skinBox.style.cursor = `url('data:image/svg+xml;utf8,${encodeURIComponent(svg)}') 16 16, auto`;
+        }, 150);
+        </script>
+
+        <div class="random-emoji">Dokážu být cokoliv!</div>
+        <script>
+        // Random emoji cursor
+        const randomBox = document.querySelector("#kap14 .random-emoji");
+        // a fun range (stars, symbols, etc.) 0x2728
+        const base = 0x1F435, range = 1000;
+        randomBox.addEventListener("mousemove", () => {
+          const code = base + Math.floor(Math.random() * range);
+          const char = String.fromCodePoint(code);
+          const svg = `<svg xmlns="http://www.w3.org/2000/svg" height="40" width="40">
+            <text y="50%" x="50%" text-anchor="middle" dominant-baseline="central" font-size="26">${char}</text>
+          </svg>`;
+          randomBox.style.cursor = `url('data:image/svg+xml;utf8,${encodeURIComponent(svg)}') 16 16, auto`;
+        });
+        </script>
+
+        <button id="toggle">Což takhle magii?</button>
+        <script>
+        let stopaEnabled = false;
+
+        document.getElementById('toggle').addEventListener('click', () => {
+          stopaEnabled = !stopaEnabled;
+        });
+
+        document.addEventListener('mousemove', function(e) {
+          if (!stopaEnabled) return;
+          let span = document.createElement('span');
+          span.className = 'stopa';
+          span.textContent = '✨';
+          span.style.position = 'absolute';
+          span.style.left = e.pageX + 'px';
+          span.style.top = e.pageY + 'px';
+          document.body.appendChild(span);
+          setTimeout(() => span.remove(), 1000);
+        });
+        </script>
+
+        <style>
+        .stopa {
+          position: absolute;
+          color: white;
+          font-size: 24px;
+          pointer-events: none;
+          animation: zmiz 1s linear forwards;
+        }
+        @keyframes zmiz {
+          0% { opacity: 1; transform: scale(1); }
+          100% { opacity: 0; transform: scale(0.5); }
+        }
+        </style>
+      </section>
+
+      <section id="kap15" class="card bg-yellow">
+        <h2>Zvuky</h2>
+        <div>Jednoduchý přehrávač zvuku v prohlížeči: <audio src="../../media/talky-navod.mp4" controls></audio></div>
+        <pre><code>&lt;audio src="URL" controls&gt;&lt;/audio&gt;</code></pre>
+
+        <br>
+
+        <button id="testBtn">Otestuj si uši</button>
+        <button id="muteBtn">Vypnout zvuk</button>
+        <button id="resetBtn">Restartovat</button>
+
+        <p>Současná frekvence zvuku: <span id="freq">0</span> Hz</p>
+        <p>Slyšíš od frekvence: <span id="hearFreq">-</span> Hz</p>
+        <p>Zvuk se začal ztrácet v: <span id="barelyFreq">-</span> Hz</p>
+        <p>Přestal jsi slyšet v: <span id="stopFreq">-</span> Hz</p>
+
+        <script>
+          let audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+          let oscillator = null;
+          let gainNode = audioCtx.createGain();
+          gainNode.connect(audioCtx.destination);
+
+          let frequency = 20;      // starting frequency
+          let freqStep = 2;        // initial (slow) Hz per interval
+          let intervalTime = 100;  // update interval ms
+          let intervalId;
+          let hearFreq = null;
+          let barelyFreq = null;
+          let stopFreq = null;
+          let testStage = 0;       // 0=not started, 1=running, 2=heard, 3=barely, 4=finished
+          let muted = false;
+
+          function startOscillator() {
+            oscillator = audioCtx.createOscillator();
+            oscillator.type = 'sine';
+            oscillator.frequency.setValueAtTime(frequency, audioCtx.currentTime);
+            oscillator.connect(gainNode);
+            oscillator.start();
+          }
+
+          function stopOscillator() {
+            if (oscillator) {
+              oscillator.stop();
+              oscillator.disconnect();
+              oscillator = null;
+            }
+          }
+
+          function updateFrequency() {
+            frequency += freqStep;
+            oscillator.frequency.setValueAtTime(frequency, audioCtx.currentTime);
+            document.getElementById('freq').textContent = frequency.toFixed(1);
+          }
+
+          function startRamp() {
+            intervalId = setInterval(updateFrequency, intervalTime);
+          }
+
+          function stopRamp() {
+            clearInterval(intervalId);
+          }
+
+          // Handle main test button
+          document.getElementById('testBtn').addEventListener('click', () => {
+            if (testStage === 0) {
+              // Start test (slow ramp)
+              testStage = 1;
+              frequency = 20;
+              freqStep = 1; // slow start
+              startOscillator();
+              startRamp();
+              document.getElementById('testBtn').textContent = "Klikni až uslyšíš tón";
+            } else if (testStage === 1) {
+              // Mark when hearing starts, ramp faster
+              testStage = 2;
+              hearFreq = frequency;
+              document.getElementById('hearFreq').textContent = hearFreq.toFixed(1);
+              freqStep = 50; // speed up
+              document.getElementById('testBtn').textContent = "Klikni až se bude zvuk téměř ztrácet";
+            } else if (testStage === 2) {
+              // Mark barely audible, ramp slower again
+              testStage = 3;
+              barelyFreq = frequency;
+              document.getElementById('barelyFreq').textContent = barelyFreq.toFixed(1);
+              freqStep = 10; // slow down again
+              document.getElementById('testBtn').textContent = "Klikni ihned jak přestaneš tón slyšet";
+            } else if (testStage === 3) {
+              // Mark when hearing stops, end test
+              testStage = 4;
+              stopFreq = frequency;
+              document.getElementById('stopFreq').textContent = stopFreq.toFixed(1);
+              stopRamp();
+              stopOscillator();
+              document.getElementById('testBtn').disabled = true;
+            }
+          });
+
+          // Mute/unmute
+          document.getElementById('muteBtn').addEventListener('click', () => {
+            muted = !muted;
+            gainNode.gain.setValueAtTime(muted ? 0 : 1, audioCtx.currentTime);
+            document.getElementById('muteBtn').textContent = muted ? "Zapnout zvuk" : "Vypnout zvuk";
+          });
+
+          // Reset everything
+          document.getElementById('resetBtn').addEventListener('click', () => {
+            stopRamp();
+            stopOscillator();
+            frequency = 20;
+            hearFreq = null;
+            barelyFreq = null;
+            stopFreq = null;
+            testStage = 0;
+            document.getElementById('freq').textContent = "0";
+            document.getElementById('hearFreq').textContent = "-";
+            document.getElementById('barelyFreq').textContent = "-";
+            document.getElementById('stopFreq').textContent = "-";
+            document.getElementById('testBtn').textContent = "Otestuj si uši";
+            document.getElementById('testBtn').disabled = false;
+          });
+        </script>
+      </section>
+
+      <section id="kap16" class="card bg-green">
+        <h2>Profilování prohlížeče</h2>
+        <p>Prohlížeč na tebe ví spoustu věcí. Podívej se 👀:</p>
+
+        <ul>
+          <li><strong>Přibližná poloha (IP adresa)</strong>: <span id="ip"></span></li>
+          <li><strong>Přibližná poloha</strong>: <span id="approxLocation"></span></li>
+          <li><strong>Přesná poloha (GPS)</strong>: <span id="geo"></span></li>
+          <li><strong>Prohlížeč</strong>: <span id="browser"></span></li>
+          <li><strong>Rozlišení obrazovky</strong>: <span id="screen"></span></li>
+        </ul>
+
+        <p>Chceš zjistit ještě víc? Mrkni na <a href="https://amiunique.org/fingerprint" target="_blank">Am I Unique?</a></p>
+
+        <script>
+        // IP adresa přes veřejné API
+        fetch("https://api.ipify.org?format=json")
+          .then(r => r.json())
+          .then(data => {
+            document.getElementById("ip").textContent = data.ip;
+          });
+
+        fetch("https://ipapi.co/json/")
+          .then(response => {
+            if (!response.ok) throw new Error("Chyba při volání geolokace přes IP");
+            return response.json();
+          })
+          .then(data => {
+            // data.city = město, data.region = administrativní oblast (kraj), data.country_name = stát
+            const city = data.city || "Neznámé město";
+            const region = data.region || data.region_code || "Neznámý kraj";
+            const country = data.country_name || "";
+            const approx = `${city}, ${region}${country ? " (" + country + ")" : ""}`;
+            const el = document.getElementById("approxLocation");
+            if (el) el.textContent = approx;
+            else console.log("Přibližná lokalita:", approx);
+          })
+          .catch(err => {
+            console.error("Nepodařilo se získat přibližnou lokalitu:", err);
+            const el = document.getElementById("approxLocation");
+            if (el) el.textContent = "Nepodařilo se zjistit lokalitu";
+          });
+
+        // Přesná geolokace (pokud to povolíš)
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(
+            pos => {
+              document.getElementById("geo").textContent =
+                pos.coords.latitude.toFixed(3) + ", " + pos.coords.longitude.toFixed(3);
+            },
+            () => {
+              document.getElementById("geo").textContent = "Nepovoleno 🚫";
+            }
+          );
+        } else {
+          document.getElementById("geo").textContent = "Nepodporováno";
+        }
+
+        // Informace o prohlížeči
+        document.getElementById("browser").textContent = navigator.userAgent;
+
+        // Rozlišení obrazovky
+        document.getElementById("screen").textContent =
+          screen.width + " x " + screen.height + " px";
+        </script>
+      </section>
+
+
+      <section id="kap17" class="card bg-blue">
+      <h2>Ctrl+C / Ctrl+V a bezpečnost</h2>
+      <p>
+        Kopírování a vkládání (Ctrl+C / Ctrl+V) je velmi užitečné, ale také může být zneužito.
+        Zde jsou některé ukázky, jak může být obsah schránky ovlivněn.
+      </p>
+
+      <h3>1. Co je aktuálně ve schránce?</h3>
+      <button id="checkClipboard">Zobraz obsah schránky</button>
+      <pre id="clipboardContent">(čekám na kliknutí...)</pre>
+      <script>
+        document.getElementById("checkClipboard").addEventListener("click", async () => {
+          try {
+            const text = await navigator.clipboard.readText();
+            document.getElementById("clipboardContent").textContent = text || "(schránka je prázdná)";
+          } catch (e) {
+            document.getElementById("clipboardContent").textContent = "Nelze přečíst schránku (prohlížeč nebo oprávnění to blokuje).";
+          }
+        });
+      </script>
+
+      <h3>2. Vkládání do políčka</h3>
+      <p>Zkus stisknout <b>Ctrl+V</b> do tohoto pole – text se může změnit:</p>
+      <textarea id="safePasteBox" rows="3" placeholder="Sem vlož text pomocí Ctrl+V"></textarea>
+      <script>
+              document.getElementById("safePasteBox").addEventListener("paste", e => {
+          e.preventDefault();
+          let pasted = (e.clipboardData || window.clipboardData).getData("text");
+          let modified = pasted.split("").reverse().join("");
+          e.target.value = modified;
+        });
+      </script>
+
+      <h3>3. Pole, které odesílá něco jiného</h3>
+      <form id="fakeForm">
+        <input type="text" id="fakeInput" placeholder="Napiš sem text">
+        <button type="submit">Odeslat</button>
+      </form>
+      <pre id="fakeOutput"></pre>
+      <script>
+              document.getElementById("fakeForm").addEventListener("submit", e => {
+          e.preventDefault();
+          const fakeValue = document.getElementById("fakeInput").value;
+          const sentValue = "Právě jsme odsáli vaše všechny úspory z banky! (dělám si legraci)";
+          document.getElementById("fakeOutput").textContent =
+            "Napsáno: " + fakeValue + "\nOdesláno: " + sentValue;
+        });
+      </script>
+
+      <h3>4. Upravené Ctrl+C</h3>
+      <p>Označ tento text a zkus <b>Ctrl+C</b>. Do schránky se vloží něco jiného:</p>
+      <p id="trickyText" style="border:1px dashed #333; padding:0.5em;">
+        Tento text vypadá normálně, ale do schránky se dostane jiný obsah.
+      </p>
+      <script>
+          document.getElementById("trickyText").addEventListener("copy", e => {
+          e.preventDefault();
+          e.clipboardData.setData("text/plain", "Doopravdy se zkopírovalo toto!");
+          alert("Do schránky se dostal jiný text, než co jsi označil.");
+        });
+      </script>
+    </section>
+    </main>
+
+<aside class="side right">
+  <script>
+    (function() {
+      let count = 0;
+      const jokes = [
+        "Manželka: Přinesl jsi ty prášky?\nManžel: Ne, v lékárně měli pouze beta karoten, tak si počkám na plnou verzi.",
+        "Bavi se dva admini:\n-Kámoš včera během 5 minut shodil hlavní server.\n-On je hacker?\n-Ne, nemehlo.",
+        'Jeden mladý muž povídá: "Chci být velkým spisovatelem."\n- A co to pro tebe znamená velkým?\n"- To znamená, že chci psát něco, co bude číst celý svět, něco, co přinutí lidi jednat emocionálně, něco, co je přinutí ječet, křičet a řvát vztekem a zoufalstvím!"\n- Nyní pracuje pro Microsoft a píše chybové hlášky.',
+        "Víte, jak si tři programátoři vydělávají na živobytí?\nJeden vytvoří virus, druhý antivirový program a třetí prostředí ve kterém to všechno funguje.",
+        'Manželka pošle programátora do obchodu: "Dojdi pro rohlíky, a když budou mít vejce, vem jich deset."\n- Programátor přijde do obchodu a ptá se: "Máte vejce?"\n- Prodavačka: "Ano."\n- Programátor "Tak mi dejte 10 rohlíků."',
+        'A Bůh pravil: "Noe, udělej zálohu.. budu formátovat."',
+        "Problém s počítačem lze vyřešit dvěma způsoby:\n1) vyhodit počítač z okna\n2) vyhodit okna z počítače",
+        'Vejde turista v San Francisku do obchodu se zvířaty a prohlíží si opice.\nV tom vejde jiný chlap, jde rovnou k prodavaci a ptá se:\n"Prosím jednu opici typu C++."\nProdavač mu ji podá, chlap zaplatí 5000 dolaru a odejde. Překvapený turista se ptá:\n"Prosím vás, co to bylo za opici, ze byla tak drahá?"\n"No, víte, ona dokáze programovat v C++, bez chyb, efektivne, úhledný kód. Velmi dobrá investice."\n"A tamty opice?"\n"Ty stojí 10 000 dolaru, ale umí programovat v C++, v Jave i v XML."\n"Proboha, a tam máte opici za 50 000! Co dokáze ta?"\n"No, abych rekl pravdu, ještě jsem ji neviděl dělat nic. Ale ostatní opice ji oslovují project manager."',
+        "Pokud je Internet Explorer dostatečně statečný na to, aby se tě zeptal, zda ho chceš jako defaultní prohlížeč, neříkej, že ty nedokážeš pozvat dívku na rande.",
+        "Vždy, když dávám večer děti spát, přemýšlím, jestli je mám 'Uložit' anebo 'Uložit jako'..",
+        "Víte co dělá windows na měsíci?\nPadá 6 krát pomalejc.",
+        "Webmaster vyplňuje dotazník:\nVěk: 25\nVýška: 185\nBarva očí: #4040FF",
+        "Kdo se směje naposledy, má největší ping.",
+        'Bill Gates zemře a dostane se k nebeské bráně.\nSv. Petr mu říká, že může vstoupit do nebe, ale pokud by chtěl, tak si může pro věčný pobyt vybrat i peklo.\nBill se zeptá, jestli si může nejdřív obojí prohlédnout.\nV nebi to vypadá na pěknou nudu. Všichni jsou tam sice hodní, ale jediná “zábava” je zpěv žalmů před trůnem Nejvyššího. Zato v pekle je spousta překrásných žen, luxusní prostředí, moře jídla a pití – úplný opak toho, co si lidé pod peklem představují. Takže řekne, že zůstane tady.\nOkamžitě je uvržen do pekelných muk: oheň, síra, mučidla.\n“Co to znamená, Svatý Petře, tohle jste mi zamlčel! A kde je ten bar s krasavicemi?”\n“To byla demoverze...”',
+        "Ten Windows vypadá že bude funkční, už mi hlásí chybu...",
+        "Co slyší webmaster, když jede vlakem?\n&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;",
+        "Rytíř bojuje s dvouhlavým drakem. Usekne mu obě hlavy, ale drakovi narostou 4 nové.\nUseká je a drakovi naroste 8 hlav.\nUseká je a drakovi naroste 16 hlav.\nUseká je a drakovi naroste 32 hlav.\nUseká je a drakovi naroste 64 hlav.\nUseká je a drakovi naroste 128 hlav.\nUseká je a pak už žádné hlavy drakovi nenarostou a je konečně po něm.\nByl to osmibitový drak.",
+        "Tatranky.zip - energie sbalená na cesty.",
+        "Jaký je rozdíl mezi obyčejným člověkem a programátorem?\nObyčejný člověk si myslí, že jeden kilobyte má 1000 bytů a programátor si myslí, že jeden kilometr má 1024 metrů.",
+        "Co volá programátor, když se topí?F1, F1, F1!",
+        "Jedou dva programátoři po dálnici když v tom jim upadne kolo. Zastaví, vystoupí, znovu nastoupí a jedou dál.",
+        "Lidstvo se dělí na 10 druhů, na ty co umějí binární soustavu a na ty co neumí.",
+        'Co říká bezpečnostní software chycenému červovi?\n"Jsi zatčen! A nezkoušej na mě žádný fork()y!"',
+        "A znáte ten, jak přijde programátor v neděli ráno do posilovny?",
+        'Přijde Bill Gates k zrcadlu a říká mu: "Zrcadlo, kdo je na světě nejbohatší?"\nZrcadlo: "Aplikace zrcadlo provedla neplatnou operaci. Bude nyní ukončena."',
+        "- Tak už jsem vyřešil ten problém s tmavým monitorem.\n- Vážně, a jak, koupils novej?\n- Ale ne, mamka mi ho otřela hadrem."
+      ];
+
+      const aside = document.currentScript.parentElement;
+
+      // Generátor náhodných pastelových barev
+      function randomPastelColor() {
+        const r = Math.floor((Math.random() * 127) + 127);
+        const g = Math.floor((Math.random() * 127) + 127);
+        const b = Math.floor((Math.random() * 127) + 127);
+        return `rgb(${r}, ${g}, ${b})`;
+      }
+
+      // Funkce pro vytvoření vtipu
+      function createJokeBox(text) {
+        const box = document.createElement('div');
+        box.className = 'floating-joke';
+        box.innerHTML = text.replace(/\n/g, '<br>');
+
+        // Náhodná pozice na obrazovce (vertikálně)
+        const viewportHeight = window.innerHeight;
+        const boxHeight = 140;
+        const maxTop = viewportHeight - boxHeight - 20;
+        const top = Math.floor(Math.random() * maxTop) + 10;
+        box.style.top = top + 'px';
+
+        // Náhodná pastelová barva
+        box.style.background = randomPastelColor();
+
+        aside.appendChild(box);
+
+        // Zmizí na hover
+        box.addEventListener('mouseenter', () => {
+          --count;
+          box.remove();
+        });
+
+        // Animace vpravo → viditelné
+        requestAnimationFrame(() => {
+          box.style.transform = 'translateX(0)';
+          box.style.opacity = '1';
+        });
+      }
+
+      // Náhodný vtip
+      function randomJoke() {
+        return jokes[Math.floor(Math.random() * jokes.length)];
+      }
+
+      // Plánovač nového vtipu
+      function scheduleNextJoke() {
+        setTimeout(() => {
+          createJokeBox(randomJoke());
+        }, 1000 + Math.random() * 10000);
+      }
+
+      // Při scrollu přidáme nový vtip, pokud jich není moc
+      window.addEventListener('scroll', () => {
+        if (count < 3) {
+           ++count;
+           scheduleNextJoke();
+        }
+      });
+
+      // Styly
+      const style = document.createElement('style');
+      style.textContent = `
+        .side.right { position: relative; }
+        .floating-joke {
+          position: fixed;
+          right: 0;
+          transform: translateX(110%);
+          max-width: 260px;
+          min-height: 140px;
+          border: 1px solid #ccc;
+          border-radius: 12px;
+          padding: 15px;
+          margin: 5px;
+          box-shadow: 3px 3px 16px rgba(0,0,0,0.25);
+          opacity: 0;
+          transition: transform 0.5s ease, opacity 0.5s ease;
+          cursor: pointer;
+          z-index: 9999;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          font-size: 1rem;
+        }
+      `;
+      aside.appendChild(style);
+    })();
+  </script>
+</aside>
+
+  </div>
+
+  <footer class="container" style="display:flex;justify-content:space-between;padding:20px 16px 40px; color:#666;">
+    <small><a href="https://ldoktor.github.io">© 2025 Lukáš Doktor - Ukázková stránka HTML</a></small>
+    <small><span onclick="alert('Co takhle odeslat této stránce ?libi=hacker')">π</span></small>
+  </footer>
+</body>
+</html>

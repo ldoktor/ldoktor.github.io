@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta name="generator" content=
+"HTML Tidy for HTML5 for Linux version 5.8.0">
+<meta charset="UTF-8">
+<title>Jednoduchá hra</title>
+
+<style>
+    body { text-align: center; font-family: sans-serif; }
+    #gameCanvas { border: 1px solid black; background: #eee; cursor: crosshair; }
+    #message { margin-top: 10px; font-size: 18px; }
+    #coords { margin-top: 5px; font-size: 14px; color: gray; }
+    button { margin-top: 10px; padding: 10px 20px; font-size: 18px; }
+</style>
+</head>
+<body>
+<h1>Desková hra</h1>
+<canvas id="gameCanvas" width="1024" height="768"></canvas>
+<br>
+<button id="rollBtn">Hodit kostkou</button> <button id=
+"debugBtn">debug</button>
+<div id="message">Začni hru!</div>
+<div id="coords"></div>
+<script>
+    const canvas = document.getElementById("gameCanvas");
+    const ctx = canvas.getContext("2d");
+    const message = document.getElementById("message");
+    const coords = document.getElementById("coords");
+
+    // načtení obrázku herní desky
+    const boardImg = new Image();
+    boardImg.src = "media/deska.jpg";
+
+    // souřadnice políček
+    const x = [160, 234, 297, 351, 403, 454, 488, 493, 496, 457, 418, 404, 434, 484, 517, 534, 573, 619, 654, 684, 676, 636, 588, 532, 488, 471, 469];
+    const y = [600, 615, 627, 631, 627, 606, 565, 513, 471, 473, 456, 408, 362, 346, 302, 469, 434, 414, 371, 328, 280, 254, 237, 250, 203, 160, 87];
+    const lastX = x.length - 1;
+
+    let currentPos = 0; // index pole, na kterém figurka stojí
+    let debug = false; // zobrazit extra informace
+
+    function drawBoard() {
+      ctx.clearRect(0,0,canvas.width,canvas.height);
+      ctx.drawImage(boardImg, 0, 0, canvas.width, canvas.height);
+
+      if (debug == true) {
+        for (let i = 0; i < x.length; i++) {
+          ctx.fillText(i.toString(), x[i], y[i]);
+        }
+      }
+
+      // figurka
+      ctx.beginPath();
+      ctx.arc(x[currentPos], y[currentPos], 10, 0, 2*Math.PI);
+      ctx.fillStyle = "red";
+      ctx.fill();
+    }
+
+    function moveFigure(steps) {
+      let originalPos = currentPos;
+      let padlo = steps;
+
+      // animace krok po kroku
+      const interval = setInterval(() => {
+        if (steps == 0) {
+          // Konec tahu
+          if (currentPos === lastX) {
+              message.textContent = "Vyhrál jsi!";
+          } else if ((currentPos == 3) || (currentPos === 4) || (currentPos === 5)) {
+              message.textContent = "Drak tě vrátil na políčko 2!";
+              currentPos = 1;
+              drawBoard();
+          }
+          // další pravidla sem
+          clearInterval(interval);
+        } else if (currentPos < lastX) {
+          // Zde pravidla pro posun
+          let udelejKrok = true;
+          if (currentPos === 8) {
+              if (padlo % 2) {
+                  currentPos = 15;
+                  steps--;
+                  udelejKrok = false
+              }
+          } else if (currentPos === 14) {
+              currentPos = 22;
+          }
+
+          if (udelejKrok) {
+              currentPos++;
+              steps--;
+          }
+          drawBoard();
+        } else if (currentPos === lastX) {
+            // Hodil moc
+            message.textContent = "Musíš se trefit přesně na poslední políčko"
+            currentPos = originalPos;
+            steps = 0;
+            drawBoard();
+        } else {
+          message.textContent = "Tohle by se nemělo nikdy stát!";
+          currentPos = 0;
+          drawBoard();
+        }
+      }, 500);
+    }
+
+    function rollDice() {
+      const dice = Math.floor(Math.random()*6)+1;
+      message.textContent = "Padla " + dice + ".";
+      moveFigure(dice);
+    }
+
+    // DEBUG: Zobrazení pozice myši
+    function updateMouseCoords(e) {
+      const rect = canvas.getBoundingClientRect();
+      const mouseX = Math.floor(e.clientX - rect.left);
+      const mouseY = Math.floor(e.clientY - rect.top);
+      coords.textContent = `Souřadnice myši: x=${mouseX}, y=${mouseY}`;
+    }
+
+    // DEBUG: Zapnutí/vypnutí debug módu
+    function toggleDebug() {
+      debug = !debug;
+
+      if (debug) {
+        coords.textContent = "Souřadnice myši: x= , y= ";
+        canvas.addEventListener("mousemove", updateMouseCoords);
+        message.textContent = "Debug režim zapnut.";
+      } else {
+        canvas.removeEventListener("mousemove", updateMouseCoords);
+        coords.textContent = "";
+        message.textContent = "Debug režim vypnut.";
+      }
+
+      drawBoard();
+    }
+
+
+    document.getElementById("rollBtn").addEventListener("click", rollDice);
+    document.addEventListener("keydown", (e) => {
+      if (e.code === "Space") rollDice();
+    });
+    document.getElementById("debugBtn").addEventListener("click", toggleDebug);
+
+    boardImg.onload = drawBoard;
+</script>
+</body>
+</html>
