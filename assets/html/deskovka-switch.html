@@ -12,11 +12,25 @@
     #message { margin-top: 10px; font-size: 18px; }
     #coords { margin-top: 5px; font-size: 14px; color: gray; }
     button { margin-top: 10px; padding: 10px 20px; font-size: 18px; }
+    #dragonFireOverlay {
+      position: absolute;
+      top: 450px;   /* adjust to match your board */
+      left: 270px;  /* adjust */
+      width: 200px;
+      display: none;
+    }
+    #gameWrapper {
+      position: relative;
+      display: inline-block;
+    }
 </style>
 </head>
 <body>
 <h1>Desková hra</h1>
-<canvas id="gameCanvas" width="1024" height="768"></canvas>
+<div id="gameWrapper">
+  <canvas id="gameCanvas" width="1024" height="768"></canvas>
+  <img id="dragonFireOverlay" src="https://i.gifer.com/3iCN.gif">
+</div>
 <br>
 <button id="rollBtn">Hodit kostkou</button> <button id=
 "debugBtn">debug</button>
@@ -39,6 +53,15 @@
 
     let currentPos = 0; // index pole, na kterém figurka stojí
     let debug = false; // zobrazit extra informace
+
+    // Vizuální efekty
+    function dragonFire(callback) {
+	  dragonFireOverlay.style.display = "block";
+	  setTimeout(() => {
+		dragonFireOverlay.style.display = "none";
+		callback();
+	  }, 800);
+	}
 
     function drawBoard() {
       ctx.clearRect(0,0,canvas.width,canvas.height);
@@ -70,8 +93,10 @@
               case 4:
               case 5:
                 message.textContent = "Drak tě vrátil na políčko 2!";
-                currentPos = 1;
-                drawBoard();
+                dragonFire(() => {
+				  currentPos = 1;
+				  drawBoard();
+				});
                 break;
               case lastX:
                 message.textContent = "Vyhrál jsi!";
