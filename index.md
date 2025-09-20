@@ -31,11 +31,10 @@ jako připomínka, či jiným lektorům jako zdroj informací.
 
 ## Aktuality:
 
-**Začíná zápis na rok 2025/2026 opět na ZŠ Nuselská, dle zájmu 0 - 3 skupiny každý čtvrtek od 13:15, 14:15 a 15:15. Vyplněné [přihlášky](2025_2026/prihlaska.pdf) posílejte prosím na email viz. kontakty.**
 
 ## Současné kurzy:
 
-* ZŠ Nuselská 2025/2026 - [začátečníci](2025_2026/zacatecnici), [pokročilí](2025_2026/pokrocili), [pokročilí2](2025_2026/pokrocili2) &nbsp;&nbsp; ([letáček](2025_2026/letacek.jpg), [přihláška](2025_2026/prihlaska.pdf))
+* ZŠ Nuselská 2025/2026 - [začátečníci](2025_2026/zacatecnici), [pokročilí](2025_2026/pokrocili) &nbsp;&nbsp; ([letáček](2025_2026/letacek.jpg), [přihláška](2025_2026/prihlaska.pdf))
 
 ## Archiv kurzů:
 
