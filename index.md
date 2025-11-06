@@ -1,26 +1,12 @@
 # Programování pro děti
 
-<a href="2021_2022/zacatecnici-1-15-cubetto.jpg">
-    <img align="right" src="2021_2022/zacatecnici-1-15-cubetto-small.jpg" style="height:85px">
-</a>
-<a href="2023_2024/zacatecnici-2-02-scratch.jpg">
-    <img align="right" src="2023_2024/zacatecnici-2-02-scratch-small.jpg" style="height:85px">
-</a>
-<a href="2023_2024/pokrocili-2-04-kino.jpg">
-    <img align="right" src="2023_2024/pokrocili-2-04-kino-small.jpg" style="height:85px">
-</a>
-<a href="2021_2022/zacatecnici-2-08-pexeso.jpg">
-    <img align="right" src="2021_2022/zacatecnici-2-08-pexeso-small.jpg" style="height:85px">
-</a>
-<a href="2021_2022/pokrocili-1-09-tesla.jpg">
-    <img align="right" src="2021_2022/pokrocili-1-09-tesla-small.jpg" style="height:85px">
-</a>
-<a href="2021_2022/pokrocili-1-14-microbit2.jpg">
-    <img align="right" src="2021_2022/pokrocili-1-14-microbit2-small.jpg" style="height:85px">
-</a>
-<a href="2021_2022/pokrocili-2-11-pc.jpg">
-    <img align="right" src="2021_2022/pokrocili-2-11-pc-small.jpg" style="height:85px">
-</a>
+<img align="right" src="2021_2022/zacatecnici-1-15-cubetto-small.jpg" data-full="2021_2022/zacatecnici-1-15-cubetto.jpg" style="height:85px" class="obrazek">
+<img align="right" src="2023_2024/zacatecnici-2-02-scratch-small.jpg" data-full="2023_2024/zacatecnici-2-02-scratch.jpg" style="height:85px" class="obrazek">
+<img align="right" src="2023_2024/pokrocili-2-04-kino-small.jpg" data-full="2023_2024/pokrocili-2-04-kino.jpg" style="height:85px" class="obrazek">
+<img align="right" src="2021_2022/zacatecnici-2-08-pexeso-small.jpg" data-full="2021_2022/zacatecnici-2-08-pexeso.jpg" style="height:85px" class="obrazek">
+<img align="right" src="2021_2022/pokrocili-1-09-tesla-small.jpg" data-full="2021_2022/pokrocili-1-09-tesla.jpg" style="height:85px" class="obrazek">
+<img align="right" src="2021_2022/pokrocili-1-14-microbit2-small.jpg" data-full="2021_2022/pokrocili-1-14-microbit2.jpg" style="height:85px" class="obrazek">
+<img align="right" src="2021_2022/pokrocili-2-11-pc-small.jpg" data-full="2021_2022/pokrocili-2-11-pc.jpg" style="height:85px" class="obrazek">
 
 <br clear="right">
 
@@ -70,5 +56,14 @@ jsou volně k dispozici
 [na jeho githubu](https://github.com/xsuchy/programovani_pro_deti).
 
 <img align="right" src="media/robots_bottom.jpg">
+
+<div id="overlay" class="overlay hidden">
+  <span id="prev" class="nav">&#9664;</span>
+  <img id="overlay-img" src="" alt="Obrázek">
+  <span id="next" class="nav">&#9654;</span>
+  <span id="close" class="close">&times;</span>
+</div>
+<link rel="stylesheet" href="/assets/gallery.css">
+<script src="/assets/gallery.js"></script>
 
 [![Licence Creative Commons](https://i.creativecommons.org/l/by-sa/4.0/88x31.png)](https://creativecommons.org/licenses/by-sa/4.0/) Toto dílo podléhá licenci [Uveďte původ-Zachovejte licenci 4.0 Mezinárodní](https://creativecommons.org/licenses/by-sa/4.0/).
