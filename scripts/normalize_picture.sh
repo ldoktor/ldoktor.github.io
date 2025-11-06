@@ -20,18 +20,18 @@ for SRC in $*; do
 		OUT+="<a href=\"$SRC\">\n"
 		OUT+="    <img align=\"right\" src=\"${GROUP}-${SEMESTER}-${CLASS}-${TOPIC}-small.jpg\" style=\"height:85px\">\n"
 		OUT+="</a>\n"
-
-		EXT="$(echo "$SRC" | rev | cut -d'.' -f1 | rev)"
-		SMALL="${SRC%.jpg}-small.$EXT"
-		if [ -e "$SMALL" ]; then
-			echo "Existing $SMALL"
-		else
-			echo "Creating $SMALL"
-			jpegoptim -m 80 "$SRC" 2>&1
-			convert "$SRC" -resize 150x150 -quality 60 "$SMALL" 2>&1
-		fi
 	else
 		echo "Incorrect file name $SRC"
+	fi
+
+	EXT="$(echo "$SRC" | rev | cut -d'.' -f1 | rev)"
+	SMALL="${SRC%.$EXT}-small.$EXT"
+	if [ -e "$SMALL" ]; then
+		echo "Existing $SMALL"
+	else
+		echo "Creating $SMALL"
+		jpegoptim -m 80 "$SRC" 2>&1
+		convert "$SRC" -resize 150x150 -quality 60 "$SMALL" 2>&1
 	fi
 done
 
