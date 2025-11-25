@@ -15,8 +15,8 @@ img.obrazek:hover {
 .overlay.hidden { display: none; }
 
 .overlay img {
-  max-width: 90%;
-  max-height: 80%;
+  max-width: 99%;
+  max-height: 99%;
 }
 
 .nav {
