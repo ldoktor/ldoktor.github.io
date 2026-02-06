@@ -1,6 +1,8 @@
 Vzduchový výtah
 ===============
 
+**Cílem projektu je vytvořit výtah poháněný větráčkem z PC.**
+
 Pomůcky
 -------
 
@@ -18,28 +20,75 @@ Celá sestava ve formátu FreeCAD [zde](vytah/vytah.FCStd)
 Další potřebné pomůcky:
 
 * 12cm PC ventilátor
-* L298N DC Motor Driver
-* Kalíšek/Papír
-* Sonar module
+* L298N DC Motor Driver (či dostatečně dimenzovaný tranzistor)
+* Kalíšek/Papír/Míček
+* Sonar module (HC-SR04)
 * Micro:bit + breakout module
+
+Zapojení
+--------
+
+Na vyzkoušení stačí připojit větráček na regulovatelný zdroj a otestovat základní funkci.
+Cílové zapojení včetně ovládání otáček pomocí Micro:bitu a měřením vzdálenosti pomocí
+sonaru ve formátu Fritzing [zde](vytah/zapojeni.fzz), či jako obrázky níže:
+
+<img src="vytah/zapojeni.png">
+<img src="vytah/zapojeni-breadboard.png">
 
 Detekce pater
 -------------
+
+Jednoduchý prográmek pro manuální ovládání větráčku, který se hodí pro zjištění
+požadovaného výkonu pro určité patro, později i k měření hodnot ze senzoru vzdálenosti.
+Výška se zobrazí na displayi, případně je k dispozici i na sériové konzoli. Tu
+zobrazíme kliknutím na "Show data" pod Micro:bitem v editoru makecode.
+
+Pomocí tlačítka "A" a "B" můžeme měnit výkon ventilátoru a přiřadit tak požadované
+hodnoty k jednotlivým patrům.
+
+Všimněte si, že tlačítka "A" a "B" nejsou ovládány pomocí "on button press" ale jsou
+kontrolovány v nekonečné smyčce. Napadá vás proč?
 
 <img src="vytah/00_detekce_pater.png">
 
 Ovládání
 --------
 
+Nyní, když už známe přibližné hodnoty výkonu větráčku můžeme naprogramovat nejjednodušší
+verzi bez zpětné vazby. Tlačítky "A" a "B" zvolíme patro a pokud jsme nastavili správné
+hodnoty, měl by se výtah dostat do požadovaného patra.
+
+* Co se stane, pokud změním kalíšek za jiný, nebo když "přidám" náklad?
+
 <img src="vytah/01_ovladani.png">
 
 Řízení
 ------
 
+Zpětnovazební řízení využívá zpětné vazby od senzoru vzdálenosti a snaží se neustále
+korigovat výkon větráčku tak, aby změřená výška odpovídala.
+
+* Co se stane, když budeme přičítat větší čísla?
+* Nešlo by to nějak vylepšit? Jak?
+
 <img src="vytah/02_rizeni.png">
 
 Řízení regulátorem PID
 ----------------------
+
+<img src="vytah/pid.png">
+
+V praxi se často používají regulátory PID, které kombinují tři způsoby řízení:
+
+* P (proporcionální) – čím větší je odchylka, tím silněji zasahuji
+* I (integrační) – chybu si postupně „pamatuji“ a přičítám ji, aby se úplně odstranila
+* D (derivační) – sleduji, jak rychle se chyba mění, a snažím se zabránit prudkým změnám
+
+Případně lze říci:
+
+* P – když jsem daleko od cíle, víc přidám
+* I – když se dlouho netrefuji, postupně to doháním
+* D – když se blížím moc rychle, začnu brzdit
 
 <img src="vytah/03_pid.png">
 <img src="vytah/03_pid2.png">
@@ -78,19 +127,16 @@ def on_button_pressed_b():
         set_new_floor(FLOOR - 1)
 input.on_button_pressed(Button.B, on_button_pressed_b)
 
-POWER = 0
-output = 0
-LAST_ERROR = 0
-derivative = 0
-INTEGRAL = 0
-ERROR = 0
-height = 0
-TARGET = 0
-FLOOR = 0
-FLOOR = 4
-FAN_PIN = AnalogPin.P1
-set_new_floor(FLOOR)
-# PID
+################
+# Hodnoty výtahu
+################
+TARGET = 0              # Požadovaná výška změřená senzorem
+FLOOR = 0               # Zvolené patro výtahu
+FAN_PIN = AnalogPin.P1  # Na jakém pinu je připojený větráček
+
+###############
+# PID regulátor
+###############
 # Metoda Ziegler-Nicols
 # Kp = 1, Ki = 0, Kd = 0
 # Zvyšovat/Snižovat Kp dokud nevzniknou ustálené kmity
@@ -105,42 +151,63 @@ set_new_floor(FLOOR)
 # Ki = Ki*0.3
 # Kd = Kd*1.2
 #
-# Kp samostatné udržuje offset od žádané hodnoty
-# Ki dorovnává offset
-# Kd reaguje na prudké změny
+# Kp - jak silně reagujeme na aktuální chybu
+# Ki - jak moc se učíme z minulých chyb
+# Kd - jak moc brzdíme rychlé změny
 #
 # Ki trpí na nasycení, proto je důležitý anti-wind-up, který omezí
 # min/max hodnotu stavu INTEGRAL
-Kp = 0.6
-Ki = 0.1
-Kd = 0.01
-INTEGRAL_MAX = 1022 / Ki
-PID_PERIOD = 100
-TIME_DELTA = PID_PERIOD / 1000
-PID_NEXT_RUN = control.millis()
+Kp = 0.6        # Výkon složky P
+Ki = 0.1        # Výkon složky I
+Kd = 0.01       # Výkon složky D
+LAST_ERROR = 0  # Předchozí chyba
+INTEGRAL = 0    # Paměť integrační složky
+INTEGRAL_MAX = 1022 / Ki         # Omezení integrační složky tak, aby nevystoupala do nekonečných výšin (anti-wind-up)
+PID_PERIOD = 100                 # Jak často bude PID regulátor reagovat na vstup
+TIME_DELTA = PID_PERIOD / 1000   # Normalizace změny času
+PID_NEXT_RUN = control.millis()  # Kdy má příště PID regulátor běžet
+
+set_new_floor(FLOOR)    # Než začnu, nastavím hodnoty podle zvoleného poschodí FLOOR
 
 def on_forever():
-    global PID_NEXT_RUN, height, ERROR, INTEGRAL, derivative, output, POWER, LAST_ERROR
+    # Globální proměnné které budeme přepisovat
+    global PID_NEXT_RUN, INTEGRAL, LAST_ERROR
+
     # Počkej na další periodu
     if control.millis() < PID_NEXT_RUN:
         return
+
+    # Nejprve vypočteme kdy znovu reagovat na změnu
     PID_NEXT_RUN = control.millis() + PID_PERIOD
+
+    # Změříme výšku
     height = sonar.ping(DigitalPin.P2, DigitalPin.P2, PingUnit.MICRO_SECONDS)
-    # PID
-    ERROR = height - TARGET
-    INTEGRAL = INTEGRAL + ERROR * TIME_DELTA
-    INTEGRAL = min(INTEGRAL_MAX, max(0 - INTEGRAL_MAX, INTEGRAL))
-    derivative = (ERROR - LAST_ERROR) / TIME_DELTA
-    output = Kp * ERROR + Ki * INTEGRAL + Kd * derivative
-    POWER = min(1022, max(0, output))
-    pins.analog_write_pin(FAN_PIN, POWER)
-    serial.write_value("ERROR", ERROR)
-    serial.write_value("POWER", POWER)
+
+    # Přepočítáme reakci PID regulátoru
+    # Chyba = kde jsme teď - kde chceme být
+    # Výšku měříme shora, proto má chyba opačné znaménko
+    error = height - TARGET     # error (chyba) = kde jsme teď - kde chceme být; výšku měříme shora, proto má chyba opačné znaménko (height - TARGET vs. TARGET - height)
+    INTEGRAL = INTEGRAL + error * TIME_DELTA    # Přičteme současnou chybu do paměti
+    INTEGRAL = min(INTEGRAL_MAX, max(0 - INTEGRAL_MAX, INTEGRAL))   # Omezíme na rozumný rozsah (anti-wind-up)
+    derivative = (error - LAST_ERROR) / TIME_DELTA  # Jak velká byla změna chyby od posledně normalizováno v čase
+    output = Kp * error + Ki * INTEGRAL + Kd * derivative   # Výstup je kombinací P+I+D složek
+    # Omezíme výstup na hodnoty přijatelné pro náš větráček
+    # Maximální hodnota je teoreticky 1023, ale rozdíl mezi 1022 a 1023 je v našem případě tak
+    # velký, že omezíme maximální výkon na stále-ještě-analogovou hodnotu 1022.
+    power = min(1022, max(0, output))
+    pins.analog_write_pin(FAN_PIN, power)   # Změň hodnotu výstupu (využívá PWM - pulzní modulaci)
+
+    # Debug výstup hodnot na sériovou konzoli
+    serial.write_value("error", error)
+    serial.write_value("POWER", power)
     serial.write_value("height", height)
-    serial.write_value("P", Kp * ERROR)
+    serial.write_value("P", Kp * error)
     serial.write_value("I", Ki * INTEGRAL)
     serial.write_value("D", Kd * derivative)
     serial.write_value("INTEGRAL", INTEGRAL)
-    LAST_ERROR = ERROR
+
+    # Jako poslední si uložíme odchylku jako předchozí známou hodnotu
+    LAST_ERROR = error
+
 basic.forever(on_forever)
 ```
