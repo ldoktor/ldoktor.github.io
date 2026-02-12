@@ -17,9 +17,12 @@ for SRC in $*; do
 			LAST_GRP="$GROUP"
 		fi
 
-		OUT+="<a href=\"$SRC\">\n"
-		OUT+="    <img align=\"right\" src=\"${GROUP}-${SEMESTER}-${CLASS}-${TOPIC}-small.jpg\" style=\"height:85px\">\n"
-		OUT+="</a>\n"
+		# Direct image
+		#OUT+="<a href=\"$SRC\">\n"
+		#OUT+="    <img align=\"right\" src=\"${GROUP}-${SEMESTER}-${CLASS}-${TOPIC}-small.jpg\" style=\"height:85px\">\n"
+		#OUT+="</a>\n"
+		# Gallery
+		OUT+="<img align=\"right\" src=\"${GROUP}-${SEMESTER}-${CLASS}-${TOPIC}-small.jpg\" data-full=\"$SRC\" style=\"height:85px\" class=\"obrazek\">\n"
 	else
 		echo "Incorrect file name $SRC"
 	fi
