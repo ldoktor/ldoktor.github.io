@@ -17,13 +17,16 @@ jako připomínka, či jiným lektorům jako zdroj informací.
 
 ## Aktuality:
 
+**Letos bude opět probíhat výuka v prostorách ZŠ Nuselská každý čtvrtek od 13:15, resp. 14:15,
+případně 15:15 dle zájmu. Detaily viz [letáček](2026_2027/letacek.jpg)**
 
 ## Současné kurzy:
 
-* ZŠ Nuselská 2025/2026 - [začátečníci](2025_2026/zacatecnici), [pokročilí](2025_2026/pokrocili) &nbsp;&nbsp; ([letáček](2025_2026/letacek.jpg), [přihláška](2025_2026/prihlaska.pdf))
+* ZŠ Nuselská 2026/2027 - [začátečníci](2026_2027/zacatecnici), [pokročilí](2026_2027/pokrocili) &nbsp;&nbsp; ([letáček](2026_2027/letacek.jpg), [přihláška](2026_2027/prihlaska.pdf))
 
 ## Archiv kurzů:
 
+* ZŠ Nuselská 2025/2026 - [začátečníci](2025_2026/zacatecnici), [pokročilí](2025_2026/pokrocili) &nbsp;&nbsp; ([letáček](2025_2026/letacek.jpg), [přihláška](2025_2026/prihlaska.pdf))
 * ZŠ Nuselská 2024/2025 - [začátečníci](2024_2025/zacatecnici), [pokročilí](2024_2025/pokrocili), [pokročilí2](2024_2025/pokrocili2) &nbsp;&nbsp; ([letáček](2024_2025/letacek.jpg), [přihláška](2024_2025/prihlaska.pdf))
 * ZŠ Nuselská 2023/2024 - [začátečníci](2023_2024/zacatecnici), [pokročilí](2023_2024/pokrocili), [pokročilí2](2023_2024/pokrocili2) &nbsp;&nbsp; ([letáček](2023_2024/letacek.jpg), [přihláška](2023_2024/prihlaska.pdf))
 * ZŠ Nuselská 2022/2023 - [začátečníci](2022_2023/zacatecnici), [pokročilí](2022_2023/pokrocili), [pokročilí2](2022_2023/pokrocili2) &nbsp;&nbsp; ([letáček](2022_2023/letacek.jpg), [přihláška](2022_2023/prihlaska.pdf))
